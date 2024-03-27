@@ -30,7 +30,7 @@ html {
   
 
   /* Defaults */
-  --global__kdb__backgroundcolor: var(--color-neutral-100);
+  --global__kdb__backgroundcolor: var(--ctp-base);
   --global__kdb__shadow: var(--color-neutral-200);
 
   --global__avatar__basecolor: #131B3A;
@@ -194,7 +194,7 @@ html {
 html[theme="dark"] {
   --global__fontcolor: var(--color-white);
   --global__hsla_color: 88%;
-  --global__kdb__backgroundcolor: var(--color-neutral-800);
+  --global__kdb__backgroundcolor: #ff0000;
   --global__kdb__shadow: var(--color-black);
 
   --global__shadow__color: 0deg 0% 3%;
@@ -211,7 +211,7 @@ html[theme="dark"] {
   /* Context Menu */
   --contextmenu__item_hover__backgroundcolor: var(--color-neutral-600);
   --contextmenu__backgroundcolor: var(--color-neutral-900);
-  --contextmenu__fontcolor: var(--color-neutral-100);
+  --contextmenu__fontcolor: #ff00ff;
   --contextmenu__bordercolor: var(--color-neutral-800);
 
   /* Avatar based colors & backgrounds */

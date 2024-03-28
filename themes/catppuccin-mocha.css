@@ -34,6 +34,15 @@
   --search-input-bg-experimental: var(--ctp-surface0);
 }
 
+html {
+  /* Context Menu */
+  --contextmenu__item_hover__backgroundcolor: var(--ctp-overlay0);
+  --contextmenu__backgroundcolor: var(--ctp-red);
+  --contextmenu__fontcolor: var(--ctp-text);
+  --contextmenu__item_hover__fontcolor: var(--ctp-sapphire);
+  --contextmenu__bordercolor: var(--ctp-overlay0);
+}
+
 body {
   background-color: var(--ctp-base);
   color: var(--ctp-text);
@@ -178,6 +187,11 @@ a:visited {
   color: var(--ctp-text);
 }
 
+/* group name on chat list */
+._1vnYRT0Usncfw-omfvREIT._1zRlzDyapvcQN2KrMwXANX {
+  color: var(--ctp-text);
+}
+
 /* conversation preview */
 ._3aLdohAs58eHtRaZ-POjlB ._1icB3m8_OGOdNGEnjhPONT {
   color: var(--ctp-subtext1);
@@ -187,4 +201,84 @@ a:visited {
 ._18BX2_VpE582cTh4iyMEZA:hover {
   background-color: var(--ctp-yellow);
   color: var(--ctp-base);
+}
+
+/* timestamp */
+._9pYanF0mR2qDAkCUrc_Ti {
+  color: var(--ctp-subtext0);
+}
+
+/* double check */
+._1TNcWDmcvePFx5PzTu2T-g svg {
+  fill: var(--ctp-green);
+}
+
+/* unread message counter */
+._29wNnDmOKzlqOsGXbZtTjf {
+  color: var(--ctp-text);
+}
+
+/* unread message counter pill */
+._29wNnDmOKzlqOsGXbZtTjf._11SPfUnVN77UWmnu6vjpJS {
+  background-color: var(--ctp-overlay0);
+}
+
+/* start a chat search */
+._1ZauRA3DeP5KCPT_ZChu1L {
+  background-color: var(--ctp-surface0);
+}
+
+.bp_Button2_text {
+  color: var(--ctp-text);
+}
+
+/* start a chat with... */
+._82rJk6JBLjQ2R4_RFhWI8 {
+  color: var(--ctp-text);
+}
+
+.mx_ContextualMenu {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+.mx_IconizedContextMenu .mx_IconizedContextMenu_optionList .mx_AccessibleButton {
+  color: var(--ctp-text);
+}
+
+.mx_IconizedContextMenu .mx_IconizedContextMenu_optionList .mx_AccessibleButton:hover {
+  background-color: var(--ctp-surface1);
+}
+
+/* 	.mx_IconizedContextMenu .mx_IconizedContextMenu_optionList .mx_AccessibleButton:hover {
+		color: var(--ctp-sapphire);
+	} */
+
+.mx_RoomTile2_contextMenu .mx_IconizedContextMenu_icon::before {
+  background-color: var(--ctp-text);
+}
+
+/* 	.mx_RoomTile2_contextMenu .mx_IconizedContextMenu_icon:hover::before {
+		background-color: var(--ctp-sapphire);
+	} */
+
+.nv_RoomTile2_contextMenu_activeRow.mx_AccessibleButton,
+.nv_RoomTile2_contextMenu_activeRow .mx_AccessibleButton,
+.nv_RoomTile2_contextMenu_activeRow .mx_IconizedContextMenu_label,
+.mx_IconizedContextMenu_icon {
+  color: var(--ctp-green) !important;
+  /* 		text-decoration-color: var(--ctp-sapphire) !important; */
+}
+
+.mx_IconizedContextMenu .mx_IconizedContextMenu_active.mx_AccessibleButton {
+  color: var(--ctp-green) !important;
+}
+
+.mx_IconizedContextMenu .mx_IconizedContextMenu_active .mx_IconizedContextMenu_icon::before {
+  background-color: var(--ctp-green);
+}
+
+[aria-label='Remove Chat'] .nv_RoomTile2_contextMenu_redRow .nv_AccessibleButton,
+.nv_RoomTile2_contextMenu_redRow .mx_IconizedContextMenu_label {
+  color: var(--ctp-red) !important;
 }

@@ -29,15 +29,24 @@
 
   --space-bar-bg: var(--ctp-mantle);
   --space-bar-selected: var(--ctp-overlay2);
-  --main-panel-bg: var(--ctp-crust);
+  /* --main-panel-bg: var(--ctp-crust); */
   --left-panel-bg: var(--ctp-crust);
   --left-panel-v2-bg: var(--left-panel-bg);
   --left-panel-bg-no-transparency: var(--left-panel-bg);
   --left-panel-v2-bg-no-transparency--windows: var(--left-panel-bg);
   /* --dark-panel-bg-color: var(--ctp-crust); */
-  --chatview__message_linkpreview__fontcolor: var(--ctp-blue);
-  --roomtopic-color: var(--ctp-text);
-  --secondary-content: var(--ctp-subtext0);
+  /* --chatview__message_linkpreview__fontcolor: var(--ctp-blue); */
+  /* --roomtopic-color: var(--ctp-text); */
+  /* --secondary-content: var(--ctp-subtext0); */
+
+  --search-input-bg-experimental: var(--ctp-mantle);
+  --search-bar-input-fg: var(--ctp-subtext0);
+
+  --header-control-fg: hsla(226, 64%, 88%, 0.33);
+
+  --chatview__message_self__backgroundcolor: linear-gradient(120deg, var(--ctp-mauve) 12px, var(--ctp-blue));
+  --chatview__message_self__backgroundcolor-tail: var(--ctp-blue);
+
 }
 html {
   --archive-background: var(--ctp-base);
@@ -96,6 +105,10 @@ html[theme="dark"] {
   background-color: var(--ctp-mantle);
 }
 
+.bp_Header .controls .mx_AccessibleButton::before {
+  background-color: hsla(226, 64%, 88%, 0.33);
+}
+
 .bp_LeftPanel, .bp_Header, .bp_LeftPanel_content {
   background-color: var(--ctp-crust);
 }
@@ -132,4 +145,18 @@ a:visited {
 .mx_MemberList_invite span::before {
   background-color: var(--ctp-overlay0);
   color: var(--ctp-overlay0);
+}
+
+/* Start new chat button left panel */
+.mx_AccessibleButton._1hKG82DTLveCHZ2K_QN7a8 {
+  color: hsla(226, 64%, 88%, 0.33);
+}
+
+._35xSVdLoDIOdPHIBAg_R8g {
+  background-color: var(--ctp-crust);
+}
+
+/* search input left bar */
+._2vZ9oqXdF49-MWygHhuGTy:hover { 
+  background-color: var(--ctp-base);
 }

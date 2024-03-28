@@ -45,6 +45,10 @@
   /* --chatview__message_self__backgroundcolor: linear-gradient(120deg, var(--ctp-mauve) 12px, var(--ctp-blue)); */
   /* --chatview__message_self__backgroundcolor-tail: var(--ctp-blue); */
 
+  /* this also controls usernames on reply boxes */
+  /* --avatar-hue: var(--ctp-blue); */
+  --default-avatar-hue: var(--ctp-lavender);
+
 }
 
 body {
@@ -80,6 +84,9 @@ html {
   /* this one uses surface0, but rgba doesn't work with var it seems */
   --chatview__message_reply__backgroundcolor: rgba(49, 50, 68, 0.26);
   --chatview__message__fontcolor: var(--ctp-text);
+
+  --contextmenu__fontcolor: var(--ctp-text);
+  --contextmenu__item_hover__fontcolor: var(--ctp-sapphire);
   
 }
 
@@ -177,4 +184,16 @@ a:visited {
 /* selected chat */
 ._2iYRbtxMK350NUKTyKq6TP._2BQ3vTKqpKPR2kFnIs36Nc {
   background-color: var(--ctp-surface0);
+}
+
+.mx_MessageComposer_wrapper .mx_BasicMessageComposer .mx_BasicMessageComposer_input.mx_BasicMessageComposer_input_shouldShowPillAvatar {
+  color: var(--ctp-text);
+}
+
+.mx_ReplyPreview {
+  background-color: var(--ctp-surface0);
+}
+
+.mx_ReplyPreview_wrapper::before {
+  color: var(--ctp-blue);
 }

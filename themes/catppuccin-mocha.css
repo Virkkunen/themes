@@ -29,26 +29,31 @@
 
   --space-bar-bg: var(--ctp-mantle);
   --space-bar-selected: var(--ctp-overlay2);
-  /* --main-panel-bg: var(--ctp-crust); */
+
+  /* at least one of these control the bg colour on the left pane */
   --left-panel-bg: var(--ctp-crust);
   --left-panel-v2-bg: var(--left-panel-bg);
   --left-panel-bg-no-transparency: var(--left-panel-bg);
   --left-panel-v2-bg-no-transparency--windows: var(--left-panel-bg);
-  /* --dark-panel-bg-color: var(--ctp-crust); */
-  /* --chatview__message_linkpreview__fontcolor: var(--ctp-blue); */
-  /* --roomtopic-color: var(--ctp-text); */
-  /* --secondary-content: var(--ctp-subtext0); */
 
   --search-input-bg-experimental: var(--ctp-mantle);
   --search-bar-input-fg: var(--ctp-subtext0);
 
   --header-control-fg: hsla(226, 64%, 88%, 0.33);
 
+  /* both control your own bubbles colour if "colour by chat network" is disabled */
   --chatview__message_self__backgroundcolor: linear-gradient(120deg, var(--ctp-mauve) 12px, var(--ctp-blue));
   --chatview__message_self__backgroundcolor-tail: var(--ctp-blue);
 
 }
+
+body {
+  color: var(--ctp-text);
+}
+
 html {
+  --global__fontcolor: var(--ctp-text);
+
   --archive-background: var(--ctp-base);
   --chatview__backgroundcolor: var(--ctp-base);
 
@@ -159,4 +164,9 @@ a:visited {
 /* search input left bar */
 ._2vZ9oqXdF49-MWygHhuGTy:hover { 
   background-color: var(--ctp-base);
+}
+
+/* selected chat */
+._2iYRbtxMK350NUKTyKq6TP._2BQ3vTKqpKPR2kFnIs36Nc {
+  background-color: var(--ctp-surface0);
 }

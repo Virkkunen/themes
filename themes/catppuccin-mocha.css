@@ -42,8 +42,8 @@
   --header-control-fg: hsla(226, 64%, 88%, 0.33);
 
   /* both control your own bubbles colour if "colour by chat network" is disabled */
-  --chatview__message_self__backgroundcolor: linear-gradient(120deg, var(--ctp-mauve) 12px, var(--ctp-blue));
-  --chatview__message_self__backgroundcolor-tail: var(--ctp-blue);
+  /* --chatview__message_self__backgroundcolor: linear-gradient(120deg, var(--ctp-mauve) 12px, var(--ctp-blue)); */
+  /* --chatview__message_self__backgroundcolor-tail: var(--ctp-blue); */
 
 }
 
@@ -61,20 +61,26 @@ html {
 
   --chatview__readmarker__fontcolor: var(--ctp-red);
 
-  --chatview__pill__backgroundcolor: rgb(var(--ctp-crust), 7%);
-  --chatview__pill__fontcolor: rgb(var(--ctp-crust), 50%);
+  --chatview__pill__backgroundcolor: var(--ctp-crust);
+  --chatview__pill__fontcolor: var(--ctp-crust);
   --chatview__readreceipt__fontcolor: var(--ctp-subtext0);
   --chatview__message_self__backgroundcolor: var(--ctp-lavender);
   --chatview__message_self__fontcolor: var(--ctp-base);
   --chatview__message_error__bordercolor: var(--ctp-crust);
   --chatview__message_error__backgroundcolor: var(--ctp-red);
-  --chatview__message_error__fontcolor: rgba(var(--ctp-crust), 0.8);
+  --chatview__message_error__fontcolor: var(--ctp-crust);
+  --chatview__message_quote__fontcolor: var(--ctp-subtext0);
   --chatview__message_tag__fontcolor: var(--ctp-subtext1);
-  --chatview__message_link_self__fontcolor: var(--ctp-text);
+  --chatview__message_link_self__fontcolor: var(--ctp-blue);
+  --chatview--bubble--link--self--text-color: var(--ctp-blue);
+  --chatview__message_linkpreview__fontcolor: var(--ctp-subtext0);
   --chatview__message_keyrequest__fontcolor: var(--ctp-subtext0);
   --chatview__message_keyrequest_link__fontcolor: var(--ctp-blue);
   --chatview__message_viewthread__fontcolor: var(--ctp-text);
-  --chatview__message_reply__backgroundcolor: var(--ctp-mantle);
+  /* this one uses surface0, but rgba doesn't work with var it seems */
+  --chatview__message_reply__backgroundcolor: rgba(49, 50, 68, 0.26);
+  --chatview__message__fontcolor: var(--ctp-text);
+  
 }
 
 html[theme="dark"] {
@@ -91,8 +97,8 @@ html[theme="dark"] {
   --chatview__message_highlighted__backgroundcolor: var(--ctp-yellow);
   --chatview__message_quote__fontcolor: var(--ctp-subtext0);
   --chatview__message_tag__fontcolor: var(--ctp-subtext1);
-  --chatview__pill__backgroundcolor: rgb(var(--ctp-text), 7%);
-  --chatview__pill__fontcolor: rgb(var(--ctp-text), 50%);
+  --chatview__pill__backgroundcolor: var(--ctp-mantle);
+  --chatview__pill__fontcolor: var(--ctp-subtext1);
 
   /* Context Menu */
   --contextmenu__item_hover__backgroundcolor: var(--ctp-overlay0);
@@ -134,10 +140,12 @@ a:visited {
   background-color: var(--ctp-crust);
 }
 
+/* the back and close  */
 .mx_BaseCard_back, .mx_BaseCard_close {
   background-color: var(--ctp-mantle);
 }
 
+/* the background pane for the right panel */
 .mx_RightPanel_ResizeWrapper {
   background-color: var(--ctp-base);
 }
@@ -152,7 +160,7 @@ a:visited {
   color: var(--ctp-overlay0);
 }
 
-/* Start new chat button left panel */
+/* Start new chat button on the left panel */
 .mx_AccessibleButton._1hKG82DTLveCHZ2K_QN7a8 {
   color: hsla(226, 64%, 88%, 0.33);
 }

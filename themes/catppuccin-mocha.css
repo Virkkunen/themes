@@ -32,15 +32,53 @@
 
   --search-bar-input-fg: var(--ctp-text);
   --search-input-bg-experimental: var(--ctp-surface0);
-}
 
-html {
-  /* Context Menu */
-  --contextmenu__item_hover__backgroundcolor: var(--ctp-overlay0);
-  --contextmenu__backgroundcolor: var(--ctp-red);
-  --contextmenu__fontcolor: var(--ctp-text);
-  --contextmenu__item_hover__fontcolor: var(--ctp-sapphire);
-  --contextmenu__bordercolor: var(--ctp-overlay0);
+  --default_avatar_hue: var(--ctp-blue);
+
+  --chatview__composer__backgroundcolor: var(--ctp-surface0);
+  --chatview__backgroundcolor: var(--ctp-base);
+  --chatview__readmarker__fontcolor: var(--ctp-teal);
+  --chatview__pill__backgroundcolor: var(--ctp-mantle);
+  --chatview__pill__fontcolor: #f00;
+  --chatview__message__fontcolor: var(--ctp-text);
+  --chatview__readreceipt__fontcolor: #ff0;
+  --chatview__message_self__backgroundcolor: var(--ctp-lavender);
+  --chatview__message_self__fontcolor: var(--ctp-crust);
+  --chatview__message_error__bordercolor: var(--ctp-red);
+  --chatview__message_error__backgroundcolor: var(--ctp-red);
+  --chatview__message_error__fontcolor: var(--ctp-mantle);
+  --chatview__message_tag__fontcolor: #00f;
+  --chatview__message_link_self__fontcolor: var(--ctp-blue);
+  --chatview__message_linkpreview__fontcolor: var(--ctp-blue);
+  --chatview__message_keyrequest__fontcolor: var(--ctp-text);
+  --chatview__message_keyrequest_link__fontcolor: var(--ctp-blue);
+  --chatview__message_viewthread__fontcolor: var(--ctp-text);
+  --chatview__message_reply__backgroundcolor: rgba(30, 30, 46, 0.42);
+  --chatview__message_reply_sender_name__fontcolor: #f5f;
+  --chatview__message_download__backgroundcolor: #f0f;
+  --chatview__message_highlighted__backgroundcolor: #ff0;
+  --chatview__message_selected__backgroundcolor: #ff0;
+  --chatview__message_giflabel__backgroundcolor: #f0f;
+  --chatview__message_giflabel__bordercolor: #f0f;
+  --chatview__message_giflabel__fontcolor: #f0f;
+  --chatview__message_details__backgroundcolor: #00f;
+  --chatview__message_details_floating__fontcolor: #00f;
+  --chatview__message_code__backgroundcolor: #f5f;
+  --chatview__message_quote__bordercolor: #ff6;
+  --chatview__message_quote__fontcolor: #f8f;
+  --chatview__message_reaction_add_self__backgroundcolor: var(--ctp-teal);
+
+  --archive-fg: var(--ctp-text);
+  --azure-full: var(--ctp-blue);
+  --azure-pale: var(--ctp-lavender);
+  --base: var(--ctp-text);
+  --global__kdb__backgroundcolor: var(--ctp-base);
+  --global__kdb__shadow: var(--color-crust);
+  --global__avatar__basecolor: var(--ctp-blue);
+  --global__fontcolor: var(--ctp-text);
+  --global__dragndrop__backgroundcolor: var(--ctp-mantle);
+  --global__error__fontcolor: var(--ctp-red);
+  --global__button_disabled__fontcolor: var(--ctp-mantle);
 }
 
 body {
@@ -281,4 +319,19 @@ a:visited {
 [aria-label='Remove Chat'] .nv_RoomTile2_contextMenu_redRow .nv_AccessibleButton,
 .nv_RoomTile2_contextMenu_redRow .mx_IconizedContextMenu_label {
   color: var(--ctp-red) !important;
+}
+
+.bp_MainPanel {
+  background-color: var(--ctp-base);
+}
+
+/* self reaction */
+._26kmSVS2EjmiuGo8pZydF8._1WRm95TPWOJRQ5AldIF9d8 {
+  background-color: var(--ctp-surface1);
+  color: var(--ctp-text);
+}
+
+/* reaction */
+._26kmSVS2EjmiuGo8pZydF8.b4USVCImGBZqyP5D6_tJ_:not(._1WRm95TPWOJRQ5AldIF9d8) {
+  background-color: var(--ctp-blue);
 }

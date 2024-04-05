@@ -33,6 +33,9 @@ html:not([theme='dark']) {
   --chatview__message_details__backgroundcolor: rgba(220, 224, 232, 0.4);
   --chatview__message_code__backgroundcolor: rgba(230, 233, 239, 0.65);
   --chatview__message_reaction_add_self__backgroundcolor: rgba(239, 241, 245, 0.15);
+
+  --space-bar-bg: var(--ctp-crust);
+  --left-panel-bg-no-transparency: var(--ctp-mantle);
 }
 
 html[theme='dark'] {
@@ -70,6 +73,9 @@ html[theme='dark'] {
   --chatview__message_details__backgroundcolor: rgba(17, 17, 27, 0.4);
   --chatview__message_code__backgroundcolor: rgba(24, 24, 37, 0.65);
   --chatview__message_reaction_add_self__backgroundcolor: rgba(17, 17, 27, 0.15);
+
+  --space-bar-bg: var(--ctp-crust);
+  --left-panel-bg-no-transparency: var(--ctp-mantle);
 }
 
 html {
@@ -108,9 +114,6 @@ html {
   --chatview__message_quote__bordercolor: var(--ctp-sapphire);
   --chatview__message_quote__fontcolor: var(--ctp-subtext1);
   --chatview__message_reply_sender_name__fontcolor: var(--ctp-text);
-  --chatview__message_reaction__backgroundsaturation: 97%;
-  --chatview__message_reaction__backgroundlightness: 15%;
-  --chatview__message_reaction__backgroundopacity: 0.1;
 
   /* // Context Menu */
   --contextmenu__item_hover__backgroundcolor: var(--ctp-mantle);
@@ -477,7 +480,6 @@ a:visited {
 /* Room Header */
 .mx_RoomHeader {
   background-color: var(--ctp-mantle);
-  box-shadow: -1px 15px 5px -1px rgba(17, 17, 27, 0.75);
 }
 
 .mx_RoomHeader_leftActions span,

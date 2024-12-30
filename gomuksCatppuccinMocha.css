@@ -1,0 +1,171 @@
+:root {
+  --font-stack: '"Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  --monospace-font-stack: '"FiraCode NF", "FiraCode Nerd Font", monospace';
+  transition: 0.28s ease-in-out;
+
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-maroon: #eba0ac;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #a6e3a1;
+  --ctp-teal: #94e2d5;
+  --ctp-sky: #89dceb;
+  --ctp-sapphire: #74c7ec;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext1: #bac2de;
+  --ctp-subtext0: #a6adc8;
+  --ctp-overlay2: #9399b2;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay0: #6c7086;
+  --ctp-surface2: #585b70;
+  --ctp-surface1: #45475a;
+  --ctp-surface0: #313244;
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+
+  --login-background-color: var(--ctp-crust);
+  --text-color: var(--ctp-text) !important;
+  --background-color: var(--ctp-crust);
+  --blockquote-border-color: var(--ctp-mauve);
+  --border-color: var(--ctp-mantle);
+  --button-hover-color: var(--ctp-surface2);
+  --emoji-selected-border-color: var(--ctp-teal);
+  --error-color: var(--ctp-red);
+  --highlight-pill-background-color: var(--ctp-red);
+  --highlight-pill-text-color: var(--ctp-subtext1);
+  --inverted-text-color: var(--ctp-crust);
+  --light-hover-color: var(--ctp-overlay2);
+  --lightbox-button-color: var(--surface2);
+  --link-text-color: var(--ctp-blue);
+  --modal-box-shadow-color: var(--ctp-crust);
+  --pill-background-color: var(--ctp-mauve);
+  --primary-color: var(--ctp-green);
+  --primary-color-dark: var(--ctp-green);
+
+  --room-list-background: var(--ctp-base);
+  --room-list-background-overlay: transparent;
+  --room-list-entry-hover-color: var (--ctp-lavender);
+  --room-list-entry-selected-color: rgba(180, 190, 254, 0.15);
+  --room-list-scrollbar-color: var(--ctp-overlay2);
+  --room-list-search-background-overlay: var(--ctp-surface0);
+
+  --secondary-text-color: var(--ctp-overlay1);
+  --semisecondary-text-color: var(--ctp-subtext0);
+  --sent-error-color: var(--ctp-maroon);
+  --sent-ok-color: var(--ctp-green);
+  --space-list-background-overlay: transparent;
+  --timeline-highlight-bg-color: rgba(180, 190, 254, 0.15);
+  --timeline-highlight-hover-bg-color: rgba(180, 190, 254, 0.25);
+  --timeline-hover-bg-color: rgba(180, 190, 254, 0.15);
+  --timeline-jump-bg-color: var(--ctp-green);
+  --unread-counter-highlight-bg: var(--ctp-mauve);
+  --unread-counter-message-bg: var(--ctp-text);
+  --unread-counter-notification-bg: var(--ctp-teal);
+  --unread-counter-text-color: var(--ctp-crust);
+  --visited-link-text-color: var(--ctp-mauve);
+
+  --sender-color-0: var(--ctp-blue);
+  --sender-color-1: var(--ctp-sapphire);
+  --sender-color-2: var(--ctp-maroon);
+  --sender-color-3: var(--ctp-peach);
+  --sender-color-4: var(--ctp-yellow);
+  --sender-color-5: var(--ctp-green);
+  --sender-color-6: var(--ctp-teal);
+  --sender-color-7: var(--ctp-red);
+  --sender-color-8: var(--ctp-mauve);
+  --sender-color-9: var(--ctp-blue);
+
+  --room-list-padding: 0.5rem;
+
+  --timeline-avatar-size: 2.5rem;
+  --timeline-avatar-gap: 0.5rem;
+  --timeline-avatar-total-size: calc(
+    var(--timeline-avatar-size) + var(--timeline-avatar-gap)
+  );
+  --timeline-message-gap: 1.125rem;
+  --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 2.5);
+  --timeline-message-gap-small-event: 0.125rem;
+  --timeline-sender-name-timestamp-gap: 0.3rem;
+  --timeline-sender-name-content-gap: 0.15rem;
+
+  --url-preview-background-color: var(--ctp-base);
+  --code-background-color: var(--ctp-base);
+  --media-placeholder-default-background: var(--ctp-surface0);
+  --composer-background-color: var(--ctp-mantle);
+  --timeline-jump-hover-bg-color: var(--ctp-green);
+}
+
+div.room-list-wrapper {
+  /* padding: 0.6rem 0.6rem 0 0.6rem; */
+  padding-right: 0.6rem;
+  grid-template: "spacebar search" 4rem "spacebar roomlist" 1fr / 3.2rem 1fr;
+}
+
+div.room-search-wrapper {
+  border-radius: 0.5rem;
+}
+
+div.room-entry.active {
+  border-radius: 0.5rem;
+}
+
+div.room-header {
+  background-color: var(--ctp-base);
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.65);
+}
+
+div.timeline-view {
+  overflow-x: hidden;
+}
+
+div.event-hover-menu {
+  background-color: var(--ctp-surface0);
+}
+
+div.message-composer {
+  padding: 0.625rem;
+  border-top: unset;
+}
+
+.input-area > button:nth-child(2):not(:disabled) {
+  color: var(--ctp-yellow);
+}
+.input-area > button:nth-child(3):not(:disabled) {
+  color: var(--ctp-teal);
+}
+.input-area > button:nth-child(4):not(:disabled) {
+  color: var(--ctp-maroon);
+}
+.input-area > button:nth-child(5):not(:disabled) {
+  color: var(--ctp-sky);
+}
+.input-area > button:nth-child(6):not(:disabled) {
+  color: var(--ctp-blue);
+}
+.input-area > button:nth-child(7):not(:disabled) {
+  color: var(--ctp-green);
+}
+
+div.event-context-menu {
+  background-color: var(--ctp-surface0);
+}
+
+a.hicli-matrix-uri.hicli-matrix-uri-user {
+  color: var(--ctp-crust) !important;
+  padding: .25rem .25rem;
+}
+
+div.emoji-picker, div.sticker-picker, div.gif-picker {
+  background-color: var(--ctp-base);
+}
+
+div.room-view {
+  grid-template: "header" 4rem "messageview" 1fr "autocomplete" 0 "input" auto "typing" auto / 1fr
+}

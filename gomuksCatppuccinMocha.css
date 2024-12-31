@@ -188,3 +188,11 @@ div.emoji-picker, div.sticker-picker, div.gif-picker {
 div.room-view {
   grid-template: "header" 4rem "messageview" 1fr "autocomplete" 0 "input" auto "typing" auto / 1fr
 }
+
+div.autocompletions {
+  background-color: var(--ctp-base);
+}
+
+div.reaction {
+  background-color: var(--hover-overlay0) !important;
+}

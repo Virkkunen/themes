@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Mocha for gomuks
- * v0.10.7
+ * v0.11.1
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -127,19 +127,19 @@
 /* room */
 div.room-list-wrapper {
   @media (width >= 1024px) {
-    box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.65);
+    box-shadow: .125rem 0 .625rem rgba(0, 0, 0, .65);
     grid-template: 'spacebar search' 4rem 'spacebar roomlist' 1fr / 3.2rem 1fr;
-    padding-right: 0.6rem;
+    padding-right: .6rem;
   }
 
   @media (width < 1024px) {
     background-color: var(--ctp-crust);
-    padding: 1.125rem 0.5rem 0 0;
+    padding: 1.125rem .5rem 0 0;
   }
 }
 
 div.room-search-wrapper {
-  border-radius: 0.5rem;
+  border-radius: .5rem;
 
   @media (width < 1024px) {
     height: 2.8rem;
@@ -147,12 +147,12 @@ div.room-search-wrapper {
 }
 
 div.room-entry.active {
-  border-radius: 0.5rem;
+  border-radius: .5rem;
 }
 
 div.room-header {
   background-color: var(--ctp-base);
-  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, .65);
 }
 
 div.room-view {
@@ -197,7 +197,7 @@ div.event-context-menu {
 
 a.hicli-matrix-uri.hicli-matrix-uri-user {
   color: var(--ctp-crust) !important;
-  padding: 0.25rem 0.25rem;
+  padding: .25rem .25rem;
 }
 
 div.emoji-picker,
@@ -213,4 +213,33 @@ div.reaction {
 
 div.event-hover-menu {
   background-color: var(--ctp-surface0);
+}
+
+div.right-panel {
+  border-left: unset;
+  box-shadow: -0.125rem 0 .625rem rgba(0, 0, 0, .65);
+
+  & > div.right-panel-header {
+    background-color: var(--ctp-base);
+    border: unset;
+    height: 4rem;
+  }
+
+  & > div.right-panel-content {
+    background-color: var(--ctp-mantle);
+    padding: .42rem .5rem;
+    
+  }
+}
+
+div.right-panel-content.members {
+  & > div.member-list {
+    padding: .125rem 1.125rem;
+  }
+
+  & > input.member-filter {
+    background-color: var(--ctp-surface0);
+    border-radius: .5rem;
+    padding: 1.125rem;
+  }
 }

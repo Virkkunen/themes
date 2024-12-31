@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Mocha for gomuks
- * v0.9.1
+ * v0.10.6
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -122,13 +122,22 @@
 }
 
 div.room-list-wrapper {
-  /* padding: 0.6rem 0.6rem 0 0.6rem; */
-  padding-right: 0.6rem;
-  grid-template: "spacebar search" 4rem "spacebar roomlist" 1fr / 3.2rem 1fr;
+  @media (width >= 1024px) {
+    padding-right: 0.6rem;
+    grid-template: "spacebar search" 4rem "spacebar roomlist" 1fr / 3.2rem 1fr;
+  }
+
+  @media (width < 1024px) {
+    padding: 1.125rem .5rem 1.125rem 0;
+  }
 }
 
 div.room-search-wrapper {
   border-radius: 0.5rem;
+
+  @media (width < 1024px) {
+    height: 2.8rem;
+  }
 }
 
 div.room-entry.active {

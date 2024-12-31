@@ -1,21 +1,36 @@
+/*
+ *
+ * Catppuccin Mocha for gomuks
+ * v0.9.1
+ *
+ * Theme by @vrkknn:vrkknn.net
+ * https://github.com/Virkkunen/themes/
+ *
+ * Based on Catppuccin
+ * https://github.com/catppuccin/catppuccin
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Fira+Sans&display=swap');
+
 :root {
-  --font-stack: '"Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
-  --monospace-font-stack: '"FiraCode NF", "FiraCode Nerd Font", monospace';
+  --font-stack: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --monospace-font-stack: "FiraCode NF", "FiraCode Nerd Font", "Fira Code", monospace;
   transition: 0.28s ease-in-out;
 
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;
   --ctp-pink: #f5c2e7;
-  --ctp-mauve: #cba6f7;
+  --ctp-mauve: rgb(203, 166, 247);
   --ctp-red: #f38ba8;
   --ctp-maroon: #eba0ac;
   --ctp-peach: #fab387;
-  --ctp-yellow: #f9e2af;
+  --ctp-yellow: #f9e1ae;
   --ctp-green: #a6e3a1;
   --ctp-teal: #94e2d5;
   --ctp-sky: #89dceb;
   --ctp-sapphire: #74c7ec;
-  --ctp-blue: #89b4fa;
+  --ctp-blue: rgb(137, 180, 250);
   --ctp-lavender: #b4befe;
   --ctp-text: #cdd6f4;
   --ctp-subtext1: #bac2de;
@@ -29,6 +44,10 @@
   --ctp-base: #1e1e2e;
   --ctp-mantle: #181825;
   --ctp-crust: #11111b;
+
+  --hover-overlay0: rgba(180, 190, 254, 0.15); /* ctp-lavender */
+  --hover-overlay1: rgba(180, 190, 254, 0.25); /* ctp-lavender */
+  --hover-reply: rgba(203, 166, 247, 0.25); /* ctp-mauve */
 
   --login-background-color: var(--ctp-crust);
   --text-color: var(--ctp-text) !important;
@@ -52,7 +71,7 @@
   --room-list-background: var(--ctp-base);
   --room-list-background-overlay: transparent;
   --room-list-entry-hover-color: var (--ctp-lavender);
-  --room-list-entry-selected-color: rgba(180, 190, 254, 0.15);
+  --room-list-entry-selected-color: var(--hover-overlay0);
   --room-list-scrollbar-color: var(--ctp-overlay2);
   --room-list-search-background-overlay: var(--ctp-surface0);
 
@@ -61,10 +80,10 @@
   --sent-error-color: var(--ctp-maroon);
   --sent-ok-color: var(--ctp-green);
   --space-list-background-overlay: transparent;
-  --timeline-highlight-bg-color: rgba(180, 190, 254, 0.15);
-  --timeline-highlight-hover-bg-color: rgba(180, 190, 254, 0.25);
-  --timeline-hover-bg-color: rgba(180, 190, 254, 0.15);
-  --timeline-jump-bg-color: var(--ctp-green);
+  --timeline-highlight-bg-color: var(--hover-overlay0);
+  --timeline-highlight-hover-bg-color: var(--hover-overlay1);
+  --timeline-hover-bg-color: var(--hover-overlay0);
+  --timeline-jump-bg-color: var(--hover-reply);
   --unread-counter-highlight-bg: var(--ctp-mauve);
   --unread-counter-message-bg: var(--ctp-text);
   --unread-counter-notification-bg: var(--ctp-teal);

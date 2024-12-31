@@ -16,7 +16,6 @@
 :root {
   --font-stack: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --monospace-font-stack: "FiraCode NF", "FiraCode Nerd Font", "Fira Code", monospace;
-  transition: 0.28s ease-in-out;
 
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;

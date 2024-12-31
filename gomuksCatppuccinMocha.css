@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Mocha for gomuks
- * v0.10.6
+ * v0.10.7
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -14,9 +14,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Fira+Sans&display=swap');
 
 :root {
-  --font-stack: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --monospace-font-stack: "FiraCode NF", "FiraCode Nerd Font", "Fira Code", monospace;
+  /* fonts */
+  --font-stack: 'Fira Sans', sans-serif;
+  --monospace-font-stack: 'Fira Code', monospace;
 
+  /* colours */
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;
   --ctp-pink: #f5c2e7;
@@ -43,52 +45,27 @@
   --ctp-base: #1e1e2e;
   --ctp-mantle: #181825;
   --ctp-crust: #11111b;
+  --opacity-overlay0: rgba(180, 190, 254, 0.15); /* ctp-lavender */
+  --opacity-overlay1: rgba(180, 190, 254, 0.25); /* ctp-lavender */
+  --jump-to-reply-overlay0: rgba(203, 166, 247, 0.25); /* ctp-mauve */
 
-  --hover-overlay0: rgba(180, 190, 254, 0.15); /* ctp-lavender */
-  --hover-overlay1: rgba(180, 190, 254, 0.25); /* ctp-lavender */
-  --hover-reply: rgba(203, 166, 247, 0.25); /* ctp-mauve */
-
-  --login-background-color: var(--ctp-crust);
-  --text-color: var(--ctp-text) !important;
-  --background-color: var(--ctp-crust);
-  --blockquote-border-color: var(--ctp-mauve);
-  --border-color: var(--ctp-mantle);
-  --button-hover-color: var(--ctp-surface2);
-  --emoji-selected-border-color: var(--ctp-teal);
-  --error-color: var(--ctp-red);
-  --highlight-pill-background-color: var(--ctp-red);
-  --highlight-pill-text-color: var(--ctp-subtext1);
-  --inverted-text-color: var(--ctp-crust);
-  --light-hover-color: var(--ctp-overlay2);
-  --lightbox-button-color: var(--surface2);
-  --link-text-color: var(--ctp-blue);
-  --modal-box-shadow-color: var(--ctp-crust);
-  --pill-background-color: var(--ctp-mauve);
-  --primary-color: var(--ctp-green);
-  --primary-color-dark: var(--ctp-green);
-
-  --room-list-background: var(--ctp-base);
+  /* room-list */
   --room-list-background-overlay: transparent;
+  --room-list-background: var(--ctp-base);
   --room-list-entry-hover-color: var (--ctp-lavender);
-  --room-list-entry-selected-color: var(--hover-overlay0);
+  --room-list-entry-selected-color: var(--opacity-overlay0);
+  --room-list-padding: 0.5rem;
   --room-list-scrollbar-color: var(--ctp-overlay2);
   --room-list-search-background-overlay: var(--ctp-surface0);
 
-  --secondary-text-color: var(--ctp-overlay1);
-  --semisecondary-text-color: var(--ctp-subtext0);
-  --sent-error-color: var(--ctp-maroon);
-  --sent-ok-color: var(--ctp-green);
-  --space-list-background-overlay: transparent;
-  --timeline-highlight-bg-color: var(--hover-overlay0);
-  --timeline-highlight-hover-bg-color: var(--hover-overlay1);
-  --timeline-hover-bg-color: var(--hover-overlay0);
-  --timeline-jump-bg-color: var(--hover-reply);
+  /* unread */
   --unread-counter-highlight-bg: var(--ctp-mauve);
   --unread-counter-message-bg: var(--ctp-text);
   --unread-counter-notification-bg: var(--ctp-teal);
   --unread-counter-text-color: var(--ctp-crust);
   --visited-link-text-color: var(--ctp-mauve);
 
+  /* sender */
   --sender-color-0: var(--ctp-blue);
   --sender-color-1: var(--ctp-sapphire);
   --sender-color-2: var(--ctp-maroon);
@@ -100,35 +77,64 @@
   --sender-color-8: var(--ctp-mauve);
   --sender-color-9: var(--ctp-blue);
 
-  --room-list-padding: 0.5rem;
-
-  --timeline-avatar-size: 2.5rem;
+  /* timeline */
   --timeline-avatar-gap: 0.5rem;
+  --timeline-avatar-size: 2.5rem;
   --timeline-avatar-total-size: calc(
     var(--timeline-avatar-size) + var(--timeline-avatar-gap)
   );
-  --timeline-message-gap: 1.125rem;
+  --timeline-highlight-bg-color: var(--opacity-overlay0);
+  --timeline-highlight-hover-bg-color: var(--opacity-overlay1);
+  --timeline-hover-bg-color: var(--opacity-overlay0);
+  --timeline-jump-bg-color: var(--jump-to-reply-overlay0);
   --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 2.5);
   --timeline-message-gap-small-event: 0.125rem;
-  --timeline-sender-name-timestamp-gap: 0.3rem;
+  --timeline-message-gap: 1.125rem;
   --timeline-sender-name-content-gap: 0.15rem;
-
-  --url-preview-background-color: var(--ctp-base);
-  --code-background-color: var(--ctp-base);
-  --media-placeholder-default-background: var(--ctp-surface0);
-  --composer-background-color: var(--ctp-mantle);
+  --timeline-sender-name-timestamp-gap: 0.3rem;
   --timeline-jump-hover-bg-color: var(--ctp-green);
+
+  /*  */
+  --background-color: var(--ctp-crust);
+  --blockquote-border-color: var(--ctp-mauve);
+  --border-color: var(--ctp-mantle);
+  --button-hover-color: var(--ctp-surface2);
+  --code-background-color: var(--ctp-base);
+  --composer-background-color: var(--ctp-mantle);
+  --emoji-selected-border-color: var(--ctp-teal);
+  --error-color: var(--ctp-red);
+  --highlight-pill-background-color: var(--ctp-red);
+  --highlight-pill-text-color: var(--ctp-subtext1);
+  --inverted-text-color: var(--ctp-crust);
+  --light-hover-color: var(--ctp-overlay2);
+  --lightbox-button-color: var(--surface2);
+  --link-text-color: var(--ctp-blue);
+  --login-background-color: var(--ctp-crust);
+  --media-placeholder-default-background: var(--ctp-surface0);
+  --modal-box-shadow-color: var(--ctp-crust);
+  --pill-background-color: var(--ctp-mauve);
+  --primary-color-dark: var(--ctp-green);
+  --primary-color: var(--ctp-green);
+  --secondary-text-color: var(--ctp-overlay1);
+  --semisecondary-text-color: var(--ctp-subtext0);
+  --sent-error-color: var(--ctp-maroon);
+  --sent-ok-color: var(--ctp-green);
+  --space-list-background-overlay: transparent;
+  --text-color: var(--ctp-text) !important;
+  --url-preview-background-color: var(--ctp-base);
 }
 
+/* room */
 div.room-list-wrapper {
   @media (width >= 1024px) {
+    box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.65);
+    grid-template: 'spacebar search' 4rem 'spacebar roomlist' 1fr / 3.2rem 1fr;
     padding-right: 0.6rem;
-    grid-template: "spacebar search" 4rem "spacebar roomlist" 1fr / 3.2rem 1fr;
   }
 
   @media (width < 1024px) {
-    padding: 1.125rem .5rem 0 0;
     background-color: var(--ctp-crust);
+    padding: 1.125rem 0.5rem 0 0;
   }
 }
 
@@ -149,19 +155,16 @@ div.room-header {
   box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.65);
 }
 
+div.room-view {
+  grid-template: 'header' 4rem 'messageview' 1fr 'autocomplete' 0 'input' auto 'typing' auto / 1fr;
+}
+
+/* timeline */
 div.timeline-view {
   overflow-x: hidden;
 }
 
-div.event-hover-menu {
-  background-color: var(--ctp-surface0);
-}
-
-div.message-composer {
-  padding: 0.625rem;
-  border-top: unset;
-}
-
+/* input */
 .input-area > button:nth-child(2):not(:disabled) {
   color: var(--ctp-yellow);
 }
@@ -181,27 +184,33 @@ div.message-composer {
   color: var(--ctp-green);
 }
 
+div.message-composer {
+  border-top: unset;
+  padding: 0.625rem;
+  box-shadow: 0 0 .625rem .125rem rgba(0, 0, 0, .20);
+}
+
+/*  */
 div.event-context-menu {
   background-color: var(--ctp-surface0);
 }
 
 a.hicli-matrix-uri.hicli-matrix-uri-user {
   color: var(--ctp-crust) !important;
-  padding: .25rem .25rem;
+  padding: 0.25rem 0.25rem;
 }
 
-div.emoji-picker, div.sticker-picker, div.gif-picker {
-  background-color: var(--ctp-base);
-}
-
-div.room-view {
-  grid-template: "header" 4rem "messageview" 1fr "autocomplete" 0 "input" auto "typing" auto / 1fr
-}
-
+div.emoji-picker,
+div.sticker-picker,
+div.gif-picker,
 div.autocompletions {
   background-color: var(--ctp-base);
 }
 
 div.reaction {
-  background-color: var(--hover-overlay0) !important;
+  background-color: var(--opacity-overlay0) !important;
+}
+
+div.event-hover-menu {
+  background-color: var(--ctp-surface0);
 }

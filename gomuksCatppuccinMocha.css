@@ -127,7 +127,8 @@ div.room-list-wrapper {
   }
 
   @media (width < 1024px) {
-    padding: 1.125rem .5rem 1.125rem 0;
+    padding: 1.125rem .5rem 0 0;
+    background-color: var(--ctp-crust);
   }
 }
 

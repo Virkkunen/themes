@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Mocha for gomuks
- * v0.11.3
+ * v0.11.4
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -22,7 +22,7 @@
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;
   --ctp-pink: #f5c2e7;
-  --ctp-mauve: rgb(203, 166, 247);
+  --ctp-mauve: #cba6f7;
   --ctp-red: #f38ba8;
   --ctp-maroon: #eba0ac;
   --ctp-peach: #fab387;
@@ -31,7 +31,7 @@
   --ctp-teal: #94e2d5;
   --ctp-sky: #89dceb;
   --ctp-sapphire: #74c7ec;
-  --ctp-blue: rgb(137, 180, 250);
+  --ctp-blue: #89b4fa;
   --ctp-lavender: #b4befe;
   --ctp-text: #cdd6f4;
   --ctp-subtext1: #bac2de;

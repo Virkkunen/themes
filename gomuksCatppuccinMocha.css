@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Mocha for gomuks
- * v1.2.0
+ * v1.2.1
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -189,6 +189,10 @@ div.room-entry {
 /* timeline */
 div.timeline-view {
   overflow-x: hidden;
+}
+
+div.timeline-event.membership-event {
+  color: var(--ctp-overlay1);
 }
 
 /* input */

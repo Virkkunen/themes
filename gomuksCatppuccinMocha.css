@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Mocha for gomuks
- * v0.11.4
+ * v1.2.0
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -54,7 +54,7 @@
   --room-list-background: var(--ctp-base);
   --room-list-entry-hover-color: var (--ctp-lavender);
   --room-list-entry-selected-color: var(--opacity-overlay0);
-  --room-list-padding: 0.5rem;
+  --room-list-padding: 0.5rem; /* vertical padding */
   --room-list-scrollbar-color: var(--ctp-overlay2);
   --room-list-search-background-overlay: var(--ctp-surface0);
 
@@ -93,6 +93,7 @@
   --timeline-sender-name-content-gap: 0.15rem;
   --timeline-sender-name-timestamp-gap: 0.3rem;
   --timeline-jump-hover-bg-color: var(--ctp-green);
+  --timeline-horizontal-padding: 1.125rem; /* mobile padding */
 
   /*  */
   --background-color: var(--ctp-crust);
@@ -119,7 +120,7 @@
   --semisecondary-text-color: var(--ctp-subtext0);
   --sent-error-color: var(--ctp-maroon);
   --sent-ok-color: var(--ctp-green);
-  --space-list-background-overlay: transparent;
+  --space-list-background-overlay: var(--ctp-mantle);
   --text-color: var(--ctp-text) !important;
   --url-preview-background-color: var(--ctp-base);
 }
@@ -127,36 +128,54 @@
 /* room */
 div.room-list-wrapper {
   @media (width >= 1024px) {
-    box-shadow: .125rem 0 .625rem rgba(0, 0, 0, .65);
-    grid-template: 'spacebar search' 4rem 'spacebar roomlist' 1fr / 3.2rem 1fr;
-    padding-right: .6rem;
+    box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.65);
+    grid-template: 'spacebar search' 5rem 'spacebar roomlist' 1fr / 3.1rem 1fr;
+    /* padding-right: 0.6rem; */
   }
 
   @media (width < 1024px) {
+    /* background-color: var(--ctp-base); */
+    /* padding: 1.125rem 0.5rem 0 0; */
+    grid-template: 'spacebar search' 4.2rem 'spacebar roomlist' 1fr / 3.1rem 1fr;
+    padding: none;
+  }
+}
+
+div.room-list {
+  padding: 0 0.625rem;
+  z-index: 10;
+
+  @media (width < 1024px) {
     background-color: var(--ctp-crust);
-    padding: 1.125rem .5rem 0 0;
+    border-radius: 0.5rem 0 0 0;
   }
 }
 
 div.room-search-wrapper {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.625rem;
+  justify-self: center;
+  width: 95%;
 
   @media (width < 1024px) {
     height: 2.8rem;
+    z-index: 10;
   }
 }
 
 div.room-entry.active {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 div.room-header {
   background-color: var(--ctp-base);
-  box-shadow: 0 0 .625rem rgba(0, 0, 0, .65);
+  border: unset;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.65);
+  z-index: 10;
 }
 
 div.room-view {
-  grid-template: 'header' 4rem 'messageview' 1fr 'autocomplete' 0 'input' auto 'typing' auto / 1fr;
+  grid-template: 'header' 4.8rem 'messageview' 1fr 'autocomplete' 0 'input' auto 'typing' auto / 1fr;
 }
 
 div.room-entry {
@@ -195,7 +214,7 @@ div.timeline-view {
 div.message-composer {
   border-top: unset;
   padding: 0.625rem;
-  box-shadow: 0 0 .625rem .125rem rgba(0, 0, 0, .20);
+  box-shadow: 0 0 0.625rem 0.125rem rgba(0, 0, 0, 0.2);
 }
 
 /*  */
@@ -203,9 +222,19 @@ div.event-context-menu {
   background-color: var(--ctp-surface0);
 }
 
-a.hicli-matrix-uri.hicli-matrix-uri-user { /* the mention pill */
+div.space-bar {
+  padding-top: 0.625rem;
+  z-index: 10;
+
+  @media (width < 1024px) {
+    background-color: var(--ctp-base);
+  }
+}
+
+a.hicli-matrix-uri.hicli-matrix-uri-user {
+  /* the mention pill */
   color: var(--ctp-crust) !important;
-  padding: 0 .5rem !important;
+  padding: 0 0.5rem !important;
 }
 
 div.emoji-picker,
@@ -225,7 +254,7 @@ div.event-hover-menu {
 
 div.right-panel {
   border-left: unset;
-  box-shadow: -0.125rem 0 .625rem rgba(0, 0, 0, .65);
+  box-shadow: -0.125rem 0 0.625rem rgba(0, 0, 0, 0.65);
 
   & > div.right-panel-header {
     background-color: var(--ctp-base);
@@ -235,23 +264,22 @@ div.right-panel {
 
   & > div.right-panel-content {
     background-color: var(--ctp-mantle);
-    padding: .42rem .5rem;
-    
+    padding: 0.42rem 0.5rem;
   }
 }
 
 div.right-panel-content.members {
   & > div.member-list {
-    padding: .125rem 1.125rem;
+    padding: 0.125rem 1.125rem;
   }
 
   & > input.member-filter {
     background-color: var(--ctp-surface0);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     padding: 1.125rem;
   }
 }
 
 div.media-container {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }

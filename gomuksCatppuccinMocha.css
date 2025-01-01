@@ -195,9 +195,9 @@ div.event-context-menu {
   background-color: var(--ctp-surface0);
 }
 
-a.hicli-matrix-uri.hicli-matrix-uri-user {
+a.hicli-matrix-uri.hicli-matrix-uri-user { /* the mention pill */
   color: var(--ctp-crust) !important;
-  padding: .25rem .25rem;
+  padding: 0 .5rem !important;
 }
 
 div.emoji-picker,
@@ -242,4 +242,8 @@ div.right-panel-content.members {
     border-radius: .5rem;
     padding: 1.125rem;
   }
+}
+
+div.media-container {
+  border-radius: .5rem;
 }

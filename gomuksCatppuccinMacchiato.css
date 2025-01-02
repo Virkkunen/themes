@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Macchiato for gomuks
- * v1.2.3
+ * v1.3.0
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -253,6 +253,25 @@ div.sticker-picker,
 div.gif-picker,
 div.autocompletions {
   background-color: var(--ctp-base);
+  border: none;
+}
+
+div.emoji-picker, div.sticker-picker {
+  & div.emoji-category-bar {
+    border: none;
+  }
+}
+
+div.emoji-picker, div.sticker-picker, div.gif-picker {
+  & div.emoji-search, & div.gif-search {
+    background-color: var(--room-list-search-background-overlay);
+    border: none;
+    border-radius: 0.5rem;
+
+    & > input {
+      border-radius: 0.5rem;
+    }
+  }
 }
 
 div.reaction {

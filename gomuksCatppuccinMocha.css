@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Mocha for gomuks
- * v1.2.1
+ * v1.2.2
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -60,10 +60,11 @@
 
   /* unread */
   --unread-counter-highlight-bg: var(--ctp-mauve);
-  --unread-counter-message-bg: var(--ctp-text);
+  --unread-counter-message-bg: var(--ctp-subtext0);
   --unread-counter-notification-bg: var(--ctp-teal);
   --unread-counter-text-color: var(--ctp-crust);
-  --visited-link-text-color: var(--ctp-mauve);
+  --space-unread-counter-highlight-bg: var(--ctp-red);
+  --space-unread-counter-message-bg: var(--ctp-subtext0)
 
   /* sender */
   --sender-color-0: var(--ctp-blue);
@@ -123,6 +124,8 @@
   --space-list-background-overlay: var(--ctp-mantle);
   --text-color: var(--ctp-text) !important;
   --url-preview-background-color: var(--ctp-base);
+  --visited-link-text-color: var(--ctp-mauve);
+
 }
 
 /* room */
@@ -176,6 +179,10 @@ div.room-header {
 
 div.room-view {
   grid-template: 'header' 4.8rem 'messageview' 1fr 'autocomplete' 0 'input' auto 'typing' auto / 1fr;
+
+  @media (width < 1024px) {
+    grid-template: 'header' 4.2rem 'messageview' 1fr 'autocomplete' 0 'input' auto 'typing' auto / 1fr;
+  }
 }
 
 div.room-entry {

@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Macchiato for gomuks
- * v1.3.2
+ * v1.3.3
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -107,7 +107,7 @@
   --highlight-pill-background-color: var(--ctp-red);
   --highlight-pill-text-color: var(--ctp-subtext1);
   --inverted-text-color: var(--ctp-crust);
-  --light-hover-color: var(--ctp-overlay2);
+  --light-hover-color: var(--opacity-overlay1);
   --lightbox-button-color: var(--surface2);
   --link-text-color: var(--ctp-blue);
   --login-background-color: var(--ctp-crust);
@@ -190,7 +190,8 @@ div.room-entry {
     }
   }
 
-  &:hover, :focus {
+  &:hover,
+  :focus {
     border-radius: 0.5rem;
   }
 }
@@ -305,18 +306,22 @@ div.right-panel {
   & > div.right-panel-content {
     background-color: var(--ctp-mantle);
     padding: 0.42rem 0.5rem;
-  }
-}
 
-div.right-panel-content.members {
-  & > div.member-list {
-    padding: 0.125rem 1.125rem;
-  }
+    &.members {
+      & > input.member-filter {
+        background-color: var(--ctp-surface0);
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 1.125rem;
+      }
 
-  & > input.member-filter {
-    background-color: var(--ctp-surface0);
-    border-radius: 0.5rem;
-    padding: 1.125rem;
+      & > div.member-list {
+        & > div.member {
+          border-radius: 0.5rem;
+          padding: 0.25rem 0.5rem;
+        }
+      }
+    }
   }
 }
 

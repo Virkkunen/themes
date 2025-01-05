@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Macchiato for gomuks
- * v1.3.3
+ * v1.3.4
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -131,12 +131,9 @@ div.room-list-wrapper {
   @media (width >= 1024px) {
     box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.65);
     grid-template: 'spacebar search' 5rem 'spacebar roomlist' 1fr / 3.1rem 1fr;
-    /* padding-right: 0.6rem; */
   }
 
   @media (width < 1024px) {
-    /* background-color: var(--ctp-base); */
-    /* padding: 1.125rem 0.5rem 0 0; */
     grid-template: 'spacebar search' 4.2rem 'spacebar roomlist' 1fr / 3.1rem 1fr;
     padding: none;
   }
@@ -180,19 +177,14 @@ div.room-view {
 }
 
 div.room-entry {
-  &.active {
-    border-radius: 0.5rem;
-  }
-
-  & > div.room-entry-right {
-    & > div.message-preview {
-      color: var(--ctp-subtext1);
-    }
-  }
-
+  &.active,
   &:hover,
-  :focus {
+  &:focus {
     border-radius: 0.5rem;
+  }
+
+  & > div.room-entry-right > div.message-preview {
+    color: var(--ctp-subtext1);
   }
 }
 
@@ -232,7 +224,8 @@ div.message-composer {
 }
 
 /*  */
-div.event-context-menu {
+div.event-context-menu,
+div.event-hover-menu {
   background-color: var(--ctp-surface0);
 }
 
@@ -285,10 +278,6 @@ div.reaction {
   background-color: var(--opacity-overlay0) !important;
 }
 
-div.event-hover-menu {
-  background-color: var(--ctp-surface0);
-}
-
 div.right-panel {
   border-left: unset;
   box-shadow: -0.125rem 0 0.625rem rgba(0, 0, 0, 0.65);
@@ -315,11 +304,9 @@ div.right-panel {
         padding: 1.125rem;
       }
 
-      & > div.member-list {
-        & > div.member {
-          border-radius: 0.5rem;
-          padding: 0.25rem 0.5rem;
-        }
+      & > div.member-list > div.member {
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
       }
     }
   }

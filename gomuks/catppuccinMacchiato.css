@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Macchiato for gomuks
- * v1.3.5
+ * v1.4.0
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -324,4 +324,74 @@ div.right-panel {
 
 div.media-container {
   border-radius: 0.5rem;
+}
+
+/* Better Tables CSS based on
+ * better-tables v2 by @nex:nexy7574.co.uk
+ * https://css.gomuks.app/theme/better-tables
+*/
+
+.html-body {
+  table {
+    border-collapse: collapse;
+    display: table;
+    border-spacing: 0;
+    width: 100%;
+
+    th,
+    td {
+      border: 1px solid var(--border-color);
+      padding: 0.5rem;
+    }
+
+    th {
+      border-width: 2px;
+    }
+
+    tr {
+      background-color: var(--timeline-hover-bg-color);
+
+      &:nth-child(2n) {
+        background-color: var(--background-color);
+      }
+    }
+  }
+}
+
+/* 
+ * Bubbles CSS based on
+ * bubblemuks v1 by @em:f.dog
+ * https://css.gomuks.app/theme/bubblemuks
+ */
+
+/* Applies only to mobile screen sizes */
+@media (width < 1024px) {
+  :root {
+    --timeline-message-gap: 0.625rem;
+    --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 3.5);
+  }
+
+  .timeline-event:not(.small-event) {
+    .event-content {
+      width: auto;
+      max-width: 98%;
+      padding: 0.5rem 0.75rem;
+      background: var(--ctp-surface0);
+      border-radius: 0.625rem;
+    }
+
+    &.own-event {
+      direction: rtl;
+      > * {
+        direction: ltr;
+      }
+      .event-sender-and-time {
+        flex-direction: row-reverse;
+      }
+      .event-content {
+        background-color: var(--ctp-base);
+        max-width: 96%;
+      }
+    }
+  }
 }

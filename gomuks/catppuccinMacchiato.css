@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Macchiato for gomuks
- * v1.4.1
+ * v1.4.2
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -390,7 +390,6 @@ div.media-container {
       }
       .event-content {
         background-color: var(--ctp-base);
-        max-width: 96%;
       }
     }
   }

@@ -380,20 +380,6 @@ div.media-container {
       border-radius: 0.625rem;
     }
 
-    &.same-sender {
-      .event-content {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-    }
-
-    &:has(+ .same-sender) {
-      .event-content {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-    }
-
     &.own-event {
       direction: rtl;
       > * {

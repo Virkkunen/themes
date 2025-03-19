@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Macchiato for gomuks
- * v1.4.2
+ * v1.4.3
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -250,7 +250,7 @@ div.space-bar {
 
 a.hicli-matrix-uri.hicli-matrix-uri-user {
   /* the mention pill */
-  color: var(--ctp-crust) !important;
+  /* color: var(--ctp-crust) !important; */
   padding: 0 0.5rem !important;
 }
 

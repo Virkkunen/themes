@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.0
+ * v2.0.2
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -206,7 +206,7 @@ div.room-search-wrapper {
 
 div.room-header {
   background-color: var(--ctp-base);
-  border: unset;
+  border: none;
   box-shadow: 0 0 0.625rem var(--box-shadow0);
   z-index: 10;
 }
@@ -236,32 +236,44 @@ div.timeline-view {
   overflow-x: hidden;
 }
 
-div.timeline-event.membership-event {
-  color: var(--ctp-overlay1);
+div.timeline-event {
+  &.membership-event {
+    color: var(--ctp-overlay1);
+  }
+
+  div.event-content {
+    & > div.power-level-body {
+      color: var(--ctp-overlay1);
+    }
+  }
 }
 
 /* input */
-.input-area > button:nth-child(2):not(:disabled) {
-  color: var(--ctp-yellow);
-}
-.input-area > button:nth-child(3):not(:disabled) {
-  color: var(--ctp-teal);
-}
-.input-area > button:nth-child(4):not(:disabled) {
-  color: var(--ctp-maroon);
-}
-.input-area > button:nth-child(5):not(:disabled) {
-  color: var(--ctp-sky);
-}
-.input-area > button:nth-child(6):not(:disabled) {
-  color: var(--ctp-blue);
-}
-.input-area > button:nth-child(7):not(:disabled) {
-  color: var(--ctp-green);
+.input-area {
+  & > button:nth-child(n + 2):nth-child(-n + 7):not(:disabled) {
+    &:nth-child(2) {
+      color: var(--ctp-yellow);
+    }
+    &:nth-child(3) {
+      color: var(--ctp-teal);
+    }
+    &:nth-child(4) {
+      color: var(--ctp-maroon);
+    }
+    &:nth-child(5) {
+      color: var(--ctp-sky);
+    }
+    &:nth-child(6) {
+      color: var(--ctp-blue);
+    }
+    &:nth-child(7) {
+      color: var(--ctp-green);
+    }
+  }
 }
 
 div.message-composer {
-  border-top: unset;
+  border-top: none;
   padding: 0.625rem;
   box-shadow: 0 0 0.625rem 0.125rem var(--box-shadow1);
 }
@@ -271,7 +283,7 @@ div.event-context-menu,
 div.event-hover-menu,
 div.context-menu {
   background-color: var(--ctp-surface0);
-  border: unset;
+  border: none;
 }
 
 div.context-menu {
@@ -293,7 +305,6 @@ div.space-bar {
 
 a.hicli-matrix-uri.hicli-matrix-uri-user {
   /* the mention pill */
-  /* color: var(--ctp-crust) !important; */
   padding: 0 0.5rem !important;
 }
 
@@ -332,12 +343,12 @@ div.reaction {
 }
 
 div.right-panel {
-  border-left: unset;
+  border-left: none;
   box-shadow: -0.125rem 0 0.625rem var(--box-shadow0);
 
   & > div.right-panel-header {
     background-color: var(--ctp-base);
-    border: unset;
+    border: none;
     height: 4.8rem;
 
     @media (width < 1024px) {
@@ -371,8 +382,11 @@ div.media-container {
 
 blockquote.reply-body {
   border-left: 3px solid var(--reply-border-color);
-  background: var(--box-shadow1);
   border-radius: 0.5rem;
+}
+
+blockquote.reply-body:not(.small) {
+  background: var(--box-shadow1);
 }
 
 /* Better Tables CSS based on

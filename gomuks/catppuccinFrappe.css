@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Frappe for gomuks
- * v1.4.3
+ * v1.5.0
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -11,7 +11,7 @@
  *
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   /* fonts */
@@ -47,6 +47,8 @@
   --opacity-overlay0: rgba(186, 187, 241, 0.15); /* ctp-lavender */
   --opacity-overlay1: rgba(186, 187, 241, 0.25); /* ctp-lavender */
   --jump-to-reply-overlay0: rgba(202, 158, 230, 0.25); /* ctp-mauve */
+  --box-shadow0: rgba(17, 17, 27, 0.45);
+  --box-shadow1: rgba(17, 17, 27, 0.2);
 
   /* room-list */
   --room-list-background-overlay: transparent;
@@ -93,7 +95,7 @@
   --timeline-sender-name-content-gap: 0.15rem;
   --timeline-sender-name-timestamp-gap: 0.3rem;
   --timeline-jump-hover-bg-color: var(--ctp-green);
-  --timeline-horizontal-padding: 1.125rem; /* mobile padding */
+  --timeline-horizontal-padding: 0.625rem; /* mobile padding */
 
   /*  */
   --background-color: var(--ctp-crust);
@@ -105,7 +107,7 @@
   --emoji-selected-border-color: var(--ctp-teal);
   --error-color: var(--ctp-red);
   --highlight-pill-background-color: var(--ctp-red);
-  --highlight-pill-text-color: var(--ctp-subtext1);
+  --highlight-pill-text-color: var(--ctp-crust);
   --inverted-text-color: var(--ctp-crust);
   --light-hover-color: var(--opacity-overlay1);
   --lightbox-button-color: var(--surface2);
@@ -129,7 +131,7 @@
 /* room */
 div.room-list-wrapper {
   @media (width >= 1024px) {
-    box-shadow: 0.125rem 0 0.625rem rgba(17, 17, 27, 0.45);
+    box-shadow: 0.125rem 0 0.625rem var(--box-shadow0);
     grid-template: 'spacebar search' 5rem 'spacebar roomlist' 1fr / 3.1rem 1fr;
   }
 
@@ -164,7 +166,7 @@ div.room-search-wrapper {
 div.room-header {
   background-color: var(--ctp-base);
   border: unset;
-  box-shadow: 0 0 0.625rem rgba(17, 17, 27, 0.45);
+  box-shadow: 0 0 0.625rem var(--box-shadow0);
   z-index: 10;
 }
 
@@ -220,7 +222,7 @@ div.timeline-event.membership-event {
 div.message-composer {
   border-top: unset;
   padding: 0.625rem;
-  box-shadow: 0 0 0.625rem 0.125rem rgba(17, 17, 27, 0.2);
+  box-shadow: 0 0 0.625rem 0.125rem var(--box-shadow1);
 }
 
 /*  */
@@ -290,7 +292,7 @@ div.reaction {
 
 div.right-panel {
   border-left: unset;
-  box-shadow: -0.125rem 0 0.625rem rgba(17, 17, 27, 0.45);
+  box-shadow: -0.125rem 0 0.625rem var(--box-shadow0);
 
   & > div.right-panel-header {
     background-color: var(--ctp-base);
@@ -361,7 +363,9 @@ div.media-container {
 /* 
  * Bubbles CSS based on
  * bubblemuks v1 by @em:f.dog
+ * alexiatweaks-bubblemuks v1 by @alexia:thomcat.rocks
  * https://css.gomuks.app/theme/bubblemuks
+ * https://css.gomuks.app/theme/alexiatweaks-bubblemuks
  */
 
 /* Applies only to mobile screen sizes */
@@ -369,15 +373,19 @@ div.media-container {
   :root {
     --timeline-message-gap: 0.625rem;
     --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 3.5);
+    --room-list-padding: 0.625rem;
   }
 
   .timeline-event:not(.small-event) {
     .event-content {
       width: auto;
       max-width: max-content;
-      padding: 0.5rem 0.75rem;
-      background: var(--ctp-surface0);
+      padding: 0.625rem;
+      background: var(--ctp-base);
       border-radius: 0.625rem;
+      .message-text {
+        margin-inline: 0.25rem;
+      }
     }
 
     &.own-event {
@@ -389,8 +397,71 @@ div.media-container {
         flex-direction: row-reverse;
       }
       .event-content {
-        background-color: var(--ctp-base);
+        background-color: var(--ctp-red);
+        color: var(--ctp-crust);
+
+        a {
+          text-decoration: underline;
+          color: var(--ctp-surface0);
+        }
       }
+    }
+
+    &:has(.media-container) {
+      .media-container {
+        margin: auto;
+      }
+      .event-content .message-text {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .event-content {
+    width: 92% !important;
+  }
+
+  .timeline-list {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  /* for some reason if I nest these, the first bubble is incorrect */
+  .timeline-event.same-sender.timeline-event:not(.own-event):not(.small-event)
+    .event-content {
+    border-top-left-radius: 0;
+  }
+  .timeline-event.timeline-event:not(.own-event):not(.small-event):has(+ .same-sender)
+    .event-content {
+    border-bottom-left-radius: 0;
+  }
+  .timeline-event.same-sender.timeline-event.own-event:not(.small-event)
+    .event-content {
+    border-top-right-radius: 0;
+  }
+  .timeline-event.timeline-event.own-event:not(.small-event):has(+ .same-sender)
+    .event-content {
+    border-bottom-right-radius: 0;
+  }
+
+  div.timeline-event {
+    & > div.event-content {
+      & > div.event-edited {
+        margin-inline: 0.25rem;
+        margin-top: 0.125rem;
+        color: var(--ctp-surface2);
+      }
+    }
+  }
+
+  div.message-composer,
+  div.typing-notifications {
+    margin: 0 1.125rem;
+  }
+
+  div.space-bar {
+    & > div.space-entry {
+      margin-bottom: 0.625rem;
     }
   }
 }

@@ -1,7 +1,7 @@
 /*
  *
  * Catppuccin Macchiato for gomuks
- * v1.5.0
+ * v1.5.1
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -328,6 +328,13 @@ div.media-container {
   border-radius: 0.5rem;
 }
 
+blockquote.reply-body {
+  border-left: 3px solid var(--reply-border-color);
+  background: var(--box-shadow1);
+  border-radius: 0.5rem;
+}
+
+
 /* Better Tables CSS based on
  * better-tables v2 by @nex:nexy7574.co.uk
  * https://css.gomuks.app/theme/better-tables
@@ -371,10 +378,9 @@ div.media-container {
 /* Applies only to mobile screen sizes */
 @media (width < 1024px) {
   :root {
-    --timeline-message-gap: 0.625rem;
-    --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 3.5);
+    --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 5);
     --room-list-padding: 0.625rem;
-  }
+  } 
 
   .timeline-event:not(.small-event) {
     .event-content {
@@ -403,6 +409,12 @@ div.media-container {
         a {
           text-decoration: underline;
           color: var(--ctp-surface0);
+        }
+
+        blockquote {
+          & > div.message-text {
+            color: var(--ctp-base);
+          }
         }
       }
     }
@@ -463,5 +475,15 @@ div.media-container {
     & > div.space-entry {
       margin-bottom: 0.625rem;
     }
+  }
+
+  blockquote.reply-body {
+    border-radius: 0.625rem;
+
+    & > div.reply-sender {
+      text-shadow: 1px 1px 2px var(--box-shadow1);
+    }
+
+    
   }
 }

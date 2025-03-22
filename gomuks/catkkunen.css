@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.2
+ * v2.0.5
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -460,14 +460,16 @@ blockquote.reply-body:not(.small) {
         background-color: var(--ctp-red);
         color: var(--ctp-crust);
 
-        a {
-          text-decoration: underline;
-          color: var(--ctp-surface0);
+        @media (prefers-color-scheme: dark) {
+          a {
+            text-decoration: underline;
+            color: var(--ctp-surface0);
+          }
         }
 
         blockquote {
           & > div.message-text {
-            color: var(--ctp-base);
+            color: var(--ctp-surface0);
           }
         }
       }
@@ -480,6 +482,12 @@ blockquote.reply-body:not(.small) {
       .event-content .message-text {
         margin-top: 0.5rem;
       }
+    }
+  }
+
+  div.html-body {
+    & code.hicli-inline-code {
+      color: var(--ctp-text);
     }
   }
 

@@ -13,42 +13,83 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* mocha */
+    --ctp-rosewater: #f5e0dc;
+    --ctp-flamingo: #f2cdcd;
+    --ctp-pink: #f5c2e7;
+    --ctp-mauve: #cba6f7;
+    --ctp-red: #f38ba8;
+    --ctp-maroon: #eba0ac;
+    --ctp-peach: #fab387;
+    --ctp-yellow: #f9e1ae;
+    --ctp-green: #a6e3a1;
+    --ctp-teal: #94e2d5;
+    --ctp-sky: #89dceb;
+    --ctp-sapphire: #74c7ec;
+    --ctp-blue: #89b4fa;
+    --ctp-lavender: #b4befe;
+    --ctp-text: #cdd6f4;
+    --ctp-subtext1: #bac2de;
+    --ctp-subtext0: #a6adc8;
+    --ctp-overlay2: #9399b2;
+    --ctp-overlay1: #7f849c;
+    --ctp-overlay0: #6c7086;
+    --ctp-surface2: #585b70;
+    --ctp-surface1: #45475a;
+    --ctp-surface0: #313244;
+    --ctp-base: #1e1e2e;
+    --ctp-mantle: #181825;
+    --ctp-crust: #11111b;
+    --opacity-overlay0: rgba(180, 190, 254, 0.15); /* ctp-lavender */
+    --opacity-overlay1: rgba(180, 190, 254, 0.25); /* ctp-lavender */
+    --jump-to-reply-overlay0: rgba(203, 166, 247, 0.25); /* ctp-mauve */
+    --box-shadow0: rgba(0, 0, 0, 0.65);
+    --box-shadow1: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* latte */
+    --ctp-rosewater: #dc8a78;
+    --ctp-flamingo: #dd7878;
+    --ctp-pink: #ea76cb;
+    --ctp-mauve: #8839ef;
+    --ctp-red: #d20f39;
+    --ctp-maroon: #e64553;
+    --ctp-peach: #fe640b;
+    --ctp-yellow: #df8e1d;
+    --ctp-green: #40a02b;
+    --ctp-teal: #179299;
+    --ctp-sky: #04a5e5;
+    --ctp-sapphire: #209fb5;
+    --ctp-blue: #1e66f5;
+    --ctp-lavender: #7287fd;
+    --ctp-text: #4c4f69;
+    --ctp-subtext1: #5c5f77;
+    --ctp-subtext0: #6c6f85;
+    --ctp-overlay2: #7c7f93;
+    --ctp-overlay1: #8c8fa1;
+    --ctp-overlay0: #9ca0b0;
+    --ctp-surface2: #acb0be;
+    --ctp-surface1: #bcc0cc;
+    --ctp-surface0: #ccd0da;
+    --ctp-base: #eff1f5;
+    --ctp-mantle: #e6e9ef;
+    --ctp-crust: #dce0e8;
+    --opacity-overlay0: rgba(114, 135, 253, 0.15); /* ctp-lavender */
+    --opacity-overlay1: rgba(114, 135, 253, 0.25); /* ctp-lavender */
+    --jump-to-reply-overlay0: rgba(136, 57, 239, 0.25); /* ctp-mauve */
+    --box-shadow0: rgba(17, 17, 27, 0.45);
+    --box-shadow1: rgba(17, 17, 27, 0.2);
+  }
+}
+
 :root {
   /* fonts */
   --font-stack: 'Fira Sans', sans-serif;
-
-  /* colours */
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo: #f2cdcd;
-  --ctp-pink: #f5c2e7;
-  --ctp-mauve: #cba6f7;
-  --ctp-red: #f38ba8;
-  --ctp-maroon: #eba0ac;
-  --ctp-peach: #fab387;
-  --ctp-yellow: #f9e1ae;
-  --ctp-green: #a6e3a1;
-  --ctp-teal: #94e2d5;
-  --ctp-sky: #89dceb;
-  --ctp-sapphire: #74c7ec;
-  --ctp-blue: #89b4fa;
-  --ctp-lavender: #b4befe;
-  --ctp-text: #cdd6f4;
-  --ctp-subtext1: #bac2de;
-  --ctp-subtext0: #a6adc8;
-  --ctp-overlay2: #9399b2;
-  --ctp-overlay1: #7f849c;
-  --ctp-overlay0: #6c7086;
-  --ctp-surface2: #585b70;
-  --ctp-surface1: #45475a;
-  --ctp-surface0: #313244;
-  --ctp-base: #1e1e2e;
-  --ctp-mantle: #181825;
-  --ctp-crust: #11111b;
-  --opacity-overlay0: rgba(180, 190, 254, 0.15); /* ctp-lavender */
-  --opacity-overlay1: rgba(180, 190, 254, 0.25); /* ctp-lavender */
-  --jump-to-reply-overlay0: rgba(203, 166, 247, 0.25); /* ctp-mauve */
-  --box-shadow0: rgba(0, 0, 0, 0.65);
-  --box-shadow1: rgba(0, 0, 0, 0.2);
 
   /* room-list */
   --room-list-background-overlay: transparent;
@@ -334,7 +375,6 @@ blockquote.reply-body {
   border-radius: 0.5rem;
 }
 
-
 /* Better Tables CSS based on
  * better-tables v2 by @nex:nexy7574.co.uk
  * https://css.gomuks.app/theme/better-tables
@@ -380,7 +420,7 @@ blockquote.reply-body {
   :root {
     --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 5);
     --room-list-padding: 0.625rem;
-  } 
+  }
 
   .timeline-event:not(.small-event) {
     .event-content {

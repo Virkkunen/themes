@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.5
+ * v2.0.6
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -306,6 +306,11 @@ div.space-bar {
 a.hicli-matrix-uri.hicli-matrix-uri-user {
   /* the mention pill */
   padding: 0 0.5rem !important;
+}
+
+a.hicli-matrix-uri-user:not(.hicli-matrix-uri-plaintext),
+& a.hicli-matrix-uri-room-alias:not(.hicli-matrix-uri-plaintext) {
+  color: var(--ctp-crust) !important;
 }
 
 div.emoji-picker,

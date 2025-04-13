@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.6
+ * v2.0.7
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -188,12 +188,12 @@ div.room-list {
 
   @media (width < 1024px) {
     background-color: var(--ctp-crust);
-    border-radius: 0.5rem 0 0 0;
+    border-radius: 0.625rem 0 0 0;
   }
 }
 
 div.room-search-wrapper {
-  border-radius: 0.5rem;
+  border-radius: 0.625rem;
   margin-top: 0.625rem;
   justify-self: center;
   width: 95%;
@@ -223,7 +223,7 @@ div.room-entry {
   &.active,
   &:hover,
   &:focus {
-    border-radius: 0.5rem;
+    border-radius: 0.625rem;
   }
 
   & > div.room-entry-right > div.message-preview {
@@ -335,10 +335,10 @@ div.gif-picker {
   & div.gif-search {
     background-color: var(--room-list-search-background-overlay);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.625rem;
 
     & > input {
-      border-radius: 0.5rem;
+      border-radius: 0.625rem;
     }
   }
 }
@@ -368,13 +368,13 @@ div.right-panel {
     &.members {
       & > input.member-filter {
         background-color: var(--ctp-surface0);
-        border-radius: 0.5rem;
+        border-radius: 0.625rem;
         margin-bottom: 0.5rem;
         padding: 1.125rem;
       }
 
       & > div.member-list > div.member {
-        border-radius: 0.5rem;
+        border-radius: 0.625rem;
         padding: 0.25rem 0.5rem;
       }
     }
@@ -382,16 +382,20 @@ div.right-panel {
 }
 
 div.media-container {
-  border-radius: 0.5rem;
+  border-radius: 0.625rem;
 }
 
 blockquote.reply-body {
   border-left: 3px solid var(--reply-border-color);
-  border-radius: 0.5rem;
+  border-radius: 0.625rem;
 }
 
 blockquote.reply-body:not(.small) {
   background: var(--box-shadow1);
+}
+
+.acl-body {
+  color: var(--ctp-overlay2);
 }
 
 /* Better Tables CSS based on

@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.7
+ * v2.0.8
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -396,6 +396,13 @@ blockquote.reply-body:not(.small) {
 
 .acl-body {
   color: var(--ctp-overlay2);
+}
+
+div.message-text {
+  &.notice-message {
+    opacity: 1;
+    color: var(--ctp-subtext0);
+  }
 }
 
 /* Better Tables CSS based on

@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.8
+ * v2.0.10
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -181,10 +181,9 @@ div.room-list-wrapper {
 
   @media (width < 1024px) {
     grid-template:
-      'spacebar search' var(--window-top-margin)
+      'spacebar placeholder' var(--window-top-margin)
       'spacebar search' 4.2rem
       'spacebar roomlist' 1fr / 3.1rem 1fr;
-    /* padding: none; */
   }
 }
 
@@ -199,15 +198,10 @@ div.room-list {
 }
 
 div.room-search-wrapper {
+  padding-top: unset;
   border-radius: 0.625rem;
-  margin-top: 0.625rem;
   justify-self: center;
   width: 95%;
-
-  @media (width < 1024px) {
-    height: 2.8rem;
-    z-index: 10;
-  }
 }
 
 div.room-header {

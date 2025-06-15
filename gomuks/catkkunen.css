@@ -173,12 +173,18 @@
 div.room-list-wrapper {
   @media (width >= 1024px) {
     box-shadow: 0.125rem 0 0.625rem var(--box-shadow0);
-    grid-template: 'spacebar search' 5rem 'spacebar roomlist' 1fr / 3.1rem 1fr;
+    grid-template:
+      'spacebar search' var(--window-top-margin)
+      'spacebar search' 5rem
+      'spacebar roomlist' 1fr / 3.1rem 1fr;
   }
 
   @media (width < 1024px) {
-    grid-template: 'spacebar search' 4.2rem 'spacebar roomlist' 1fr / 3.1rem 1fr;
-    padding: none;
+    grid-template:
+      'spacebar search' var(--window-top-margin)
+      'spacebar search' 4.2rem
+      'spacebar roomlist' 1fr / 3.1rem 1fr;
+    /* padding: none; */
   }
 }
 
@@ -212,10 +218,22 @@ div.room-header {
 }
 
 div.room-view {
-  grid-template: 'header' 4.8rem 'messageview' 1fr 'autocomplete' 0 'input' auto 'typing' auto / 1fr;
+  grid-template:
+    'header' var(--window-top-margin)
+    'header' 4.8rem
+    'messageview' 1fr
+    'autocomplete' 0
+    'input' auto
+    'typing' auto / 1fr;
 
   @media (width < 1024px) {
-    grid-template: 'header' 4.2rem 'messageview' 1fr 'autocomplete' 0 'input' auto 'typing' auto / 1fr;
+    grid-template:
+      'header' var(--window-top-margin)
+      'header' 4.2rem
+      'messageview' 1fr
+      'autocomplete' 0
+      'input' auto
+      'typing' auto / 1fr;
   }
 }
 
@@ -295,7 +313,6 @@ div.context-menu {
 }
 
 div.space-bar {
-  padding-top: 0.625rem;
   z-index: 10;
 
   @media (width < 1024px) {

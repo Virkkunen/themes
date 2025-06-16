@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.10
+ * v2.0.11
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -199,6 +199,7 @@ div.room-list {
 
 div.room-search-wrapper {
   padding-top: unset;
+  margin-top: 0.250rem;
   border-radius: 0.625rem;
   justify-self: center;
   width: 95%;
@@ -572,5 +573,15 @@ div.message-text {
     & > div.reply-sender {
       text-shadow: 1px 1px 2px var(--box-shadow1);
     }
+  }
+}
+
+/* adds some padding to the bottom 
+* because of the silly
+* forced navigation pill
+*/
+@media (width < 1024px) {
+  div.typing-notifications {
+    margin-bottom: 25px; 
   }
 }

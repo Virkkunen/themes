@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.0.11
+ * v2.2.0
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -199,7 +199,7 @@ div.room-list {
 
 div.room-search-wrapper {
   padding-top: unset;
-  margin-top: 0.250rem;
+  margin-top: 0.25rem;
   border-radius: 0.625rem;
   justify-self: center;
   width: 95%;
@@ -417,6 +417,39 @@ div.message-text {
   }
 }
 
+/* Space View */
+
+div.space-view {
+  max-width: 100rem;
+  align-items: start;
+  padding: 1.125rem;
+  
+  @media (width < 1024px) {
+    align-items: center;
+    padding: unset;
+    padding-bottom: 2rem;
+  }
+  
+  .space-children {
+    row-gap: 0.625rem;
+    .space-child {
+      padding: 0.5rem 0.25rem;
+      border-radius: 0.625rem;
+    }
+  }
+
+  .space-adder {
+    border: unset;
+    border-radius: 0.625rem;
+    background-color: var(--room-list-search-background-overlay);
+    padding: 1rem;
+    & > input {
+      border: none;
+      padding: unset;
+    }
+  }
+}
+
 /* Better Tables CSS based on
  * better-tables v2 by @nex:nexy7574.co.uk
  * https://css.gomuks.app/theme/better-tables
@@ -448,6 +481,43 @@ div.message-text {
     }
   }
 }
+
+/* Blur */
+/* div.overlay &.dimmed  */
+/* 
+.message-composer {
+  position: relative;
+  border-radius: 16px;
+  background-color: rgba(24, 24, 37, 0.8);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.message-composer::before,
+.event-context-menu::before,
+.event-hover-menu::before,
+.context-menu::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+div.event-context-menu,
+div.event-hover-menu,
+div.context-menu {
+  border-radius: 16px !important;
+  backdrop-filter: blur(16px) !important;
+  background-color: rgba(49, 50, 68, 0.18) !important;
+}
+
+.overlay.dimmed {
+  border-radius: 16px !important;
+  backdrop-filter: blur(16px) !important;
+  background-color: rgba(17, 17, 27, 0.18) !important;
+} */
 
 /* 
  * Bubbles CSS based on
@@ -582,6 +652,6 @@ div.message-text {
 */
 @media (width < 1024px) {
   div.typing-notifications {
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
   }
 }

@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v2.2.1
+ * v2.2.2
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -263,25 +263,25 @@ div.timeline-event {
 
 /* input */
 .input-area {
-  & > [title~="emoji"] {
+  & > [title~='emoji'] {
     color: var(--ctp-yellow);
   }
-  & > [title~="sticker"] {
+  & > [title~='sticker'] {
     color: var(--ctp-teal);
   }
-  & > [title~="gif"] {
+  & > [title~='gif'] {
     color: var(--ctp-maroon);
   }
-  & > [title~="location"] {
+  & > [title~='location'] {
     color: var(--ctp-sapphire);
   }
-  & > [title~="voice"] {
+  & > [title~='voice'] {
     color: var(--ctp-mauve);
   }
-  & > [title~="file"] {
+  & > [title~='file'] {
     color: var(--ctp-blue);
   }
-  & > [title~="Send"]:not([disabled]) {
+  & > [title~='Send']:not([disabled]) {
     color: var(--ctp-green);
   }
 }
@@ -424,13 +424,13 @@ div.space-view {
   max-width: 100rem;
   align-items: start;
   padding: 1.125rem;
-  
+
   @media (width < 1024px) {
     align-items: center;
     padding: unset;
     padding-bottom: 2rem;
   }
-  
+
   .space-children {
     row-gap: 0.625rem;
     .space-child {
@@ -447,6 +447,26 @@ div.space-view {
     & > input {
       border: none;
       padding: unset;
+    }
+  }
+}
+
+/* Notifications Panel */
+.notifications {
+  & > .controls {
+    background-color: var(--ctp-surface0);
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem 0.125rem var(--box-shadow1);
+    padding: 0.5rem 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  & > .notification-panel-content {
+    > .timeline-event {
+      border-radius: 0.625rem;
+      padding: 0.5rem;
     }
   }
 }

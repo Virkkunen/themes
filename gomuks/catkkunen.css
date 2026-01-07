@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.0.0
+ * v3.0.1
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -106,8 +106,8 @@
   --link-text-color: var(--ctp-blue);
   --visited-link-text-color: var(--ctp-lavender);
   --code-background-color: var(--ctp-surface0);
-  --media-placeholder-default-background: var(--ctp-overlay0);
-  --media-placeholder-button-background: var(--ctp-overlay1);
+  --media-placeholder-default-background: var(--ctp-surface0);
+  --media-placeholder-button-background: var(--ctp-maroon);
   --primary-color: var(--ctp-red);
   --primary-color-dark: var(--ctp-red);
   --error-color: var(--ctp-red);
@@ -116,7 +116,7 @@
   --highlight-pill-background-color: var(--ctp-maroon);
   --highlight-pill-text-color: var(--ctp-crust);
   --url-preview-background-color: var(--ctp-mantle);
-  --dimmed-overlay-background-color: var(--opacity-overlay0);
+  --dimmed-overlay-background-color: var(--box-shadow0);
   --button-hover-color: var(--opacity-overlay0);
   --light-hover-color: var(--opacity-overlay1);
   --composer-background-color: var(--ctp-base);
@@ -155,7 +155,7 @@
   --sender-color-9: var(--ctp-sky);
   --sent-ok-color: var(--ctp-green);
   --blockquote-border-color: var(--ctp-lavender);
-  --lightbox-button-color: var(--ctp-sky);
+  --lightbox-button-color: var(--ctp-rosewater);
 
   --room-list-padding: 0.625rem;
   --timeline-avatar-size: 2.5rem;
@@ -163,18 +163,16 @@
   --timeline-avatar-total-size: calc(var(--timeline-avatar-size) + var(--timeline-avatar-gap));
   --timeline-message-gap: 1.2rem;
   --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 6);
-  --timeline-message-gap-small-event: 0;
-  --timeline-message-gap-same-thread: 0;
-  --timeline-sender-name-timestamp-gap: .25rem;
-  --timeline-sender-name-content-gap: 0;
+  --timeline-message-gap-small-event: 0.125rem;
+  --timeline-message-gap-same-thread: 0.125rem;
+  --timeline-sender-name-timestamp-gap: 0.25rem;
+  --timeline-sender-name-content-gap: 0.225rem;
   --timeline-vertical-padding: 0;
-  --timeline-horizontal-padding: 1.5rem;
+  --timeline-horizontal-padding: min(1.5rem, 3.2vw);
   --timeline-status-size: 4rem;
   --image-picker-width: 22rem;
   --image-picker-height: 34rem;
   --image-picker-category-rows: 3;
-
-  transition: all ease-in-out 250ms;
 }
 
 /* pills */
@@ -299,9 +297,24 @@ div.right-panel {
   }
 }
 
+/* overlay */
+.overlay {
+    &.dimmed {
+        backdrop-filter: blur(10px);
+    }
+}
+
 /*  */
 div.media-container {
   border-radius: var(--round);
+  & > div.placeholder {
+    & > div.placeholder-reason {
+        border-radius: var(--round);
+        color: var(--inverted-text-color);
+        padding: 0.625rem;
+        font-weight: 500;
+    }
+  }
 }
 
 blockquote.reply-body {

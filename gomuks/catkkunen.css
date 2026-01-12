@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.0.1
+ * v3.0.2
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -95,6 +95,8 @@
 
 :root {
   --round: 0.625rem;
+  --primary-color: var(--ctp-mauve);
+  --primary-color-dark: var(--ctp-mauve);
 
   --font-stack: 'Fira Sans', sans-serif;
   --background-color: var(--ctp-crust);
@@ -108,8 +110,6 @@
   --code-background-color: var(--ctp-surface0);
   --media-placeholder-default-background: var(--ctp-surface0);
   --media-placeholder-button-background: var(--ctp-maroon);
-  --primary-color: var(--ctp-red);
-  --primary-color-dark: var(--ctp-red);
   --error-color: var(--ctp-red);
   --border-color: var(--ctp-mantle);
   --pill-background-color: var(--ctp-mauve);
@@ -184,7 +184,6 @@ a.hicli-matrix-uri-user:not(.hicli-matrix-uri-plaintext),
   font-weight: 500;
 }
 
-
 /* input */
 .input-area {
   &>[title~='emoji'] {
@@ -220,6 +219,18 @@ div.message-composer {
   border-top: none;
   padding: 0.625rem;
   box-shadow: 0 0 0.625rem 0.125rem var(--box-shadow1);
+}
+
+.silent-reply {
+  color: var(--ctp-yellow);
+}
+
+.thread-explicit-reply {
+  color: var(--ctp-sapphire);
+}
+
+.close-reply {
+  color: var(--ctp-red);
 }
 
 /*  */
@@ -299,20 +310,21 @@ div.right-panel {
 
 /* overlay */
 .overlay {
-    &.dimmed {
-        backdrop-filter: blur(10px);
-    }
+  &.dimmed {
+    backdrop-filter: blur(10px);
+  }
 }
 
 /*  */
 div.media-container {
   border-radius: var(--round);
-  & > div.placeholder {
-    & > div.placeholder-reason {
-        border-radius: var(--round);
-        color: var(--inverted-text-color);
-        padding: 0.625rem;
-        font-weight: 500;
+
+  &>div.placeholder {
+    &>div.placeholder-reason {
+      border-radius: var(--round);
+      color: var(--inverted-text-color);
+      padding: 0.625rem;
+      font-weight: 500;
     }
   }
 }

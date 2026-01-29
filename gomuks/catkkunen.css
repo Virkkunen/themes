@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.0.2
+ * v3.0.3
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -458,6 +458,20 @@ div.room-list-wrapper {
   &.small-event {
     color: var(--ctp-subtext0);
   }
+}
+
+/* share target */
+div.choose-share-target {
+  color: var(--ctp-crust);
+  height: calc(5rem + env(safe-area-inset-bottom, 0));
+  padding: 1rem !important;
+  margin: 0 1rem;
+  bottom: 5rem !important;
+  height: fit-content !important;
+  border-radius: var(--round);
+  background-color: var(--ctp-lavender) !important;
+  text-wrap: balance !important;
+  box-shadow: 0 0 0.625rem 0.125rem var(--box-shadow1);
 }
 
 /* MOBILE */

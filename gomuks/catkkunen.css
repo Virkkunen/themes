@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.0.5
+ * v3.1.0
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -133,7 +133,7 @@
   --room-list-scrollbar-color: var(--ctp-overlay0) var(--ctp-surface0);
   --room-list-entry-hover-color: var(--ctp-surface0);
   --room-list-entry-selected-color: var(--opacity-overlay0);
-  --room-list-search-background-overlay: var(--ctp-surface2);
+  --room-list-search-background-overlay: var(--ctp-surface1);
   --modal-box-shadow-color: var(--box-shadow0);
   --emoji-selected-border-color: var(--ctp-mantle);
   --image-pack-editor-selected-color: var(--ctp-surface1);
@@ -277,6 +277,7 @@ div.gif-picker {
     background-color: var(--room-list-search-background-overlay);
     border: none;
     border-radius: var(--round);
+    padding: 0.25rem;
 
     & > input {
       border-radius: var(--round);
@@ -294,7 +295,7 @@ div.right-panel {
     border: none;
     height: 4.8rem;
 
-    @media (width < 1024px) {
+    @media screen and (width < 1024px) {
       height: 4.2rem;
     }
   }
@@ -386,7 +387,7 @@ div.space-view {
   align-items: start;
   padding: 1.125rem;
 
-  @media (width < 1024px) {
+  @media screen and (width < 1024px) {
     align-items: center;
     padding: unset;
     padding-bottom: 2rem;
@@ -488,7 +489,7 @@ div.room-list-wrapper {
 /* share target */
 div.choose-share-target {
   color: var(--ctp-crust);
-  height: calc(5rem + env(safe-area-inset-bottom, 0));
+  /* height: calc(5rem + env(safe-area-inset-bottom, 0)); */
   padding: 1rem !important;
   margin: 0 1rem;
   bottom: 5rem !important;
@@ -499,10 +500,69 @@ div.choose-share-target {
   box-shadow: 0 0 0.625rem 0.125rem var(--box-shadow1);
 }
 
+/* gif picker */
+.gif-picker {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.gif-search {
+  position: sticky !important;
+  top: 0.25rem !important;
+  z-index: 1 !important;
+  margin-top: 0.625rem !important;
+  background: var(--background-color);
+  align-items: unset !important;
+  box-shadow: 0 0 0.625rem var(--box-shadow0);
+}
+
+.gif-list {
+  display: block !important;
+  columns: 3;
+  column-gap: 0.625rem;
+  height: auto;
+  max-height: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible !important;
+  padding: 0.625rem !important;
+  padding-top: 0;
+  margin: 0;
+}
+
+.gif-entry {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  max-width: none !important;
+  break-inside: avoid;
+  margin: 0 0 0.625rem 0;
+  padding: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 16.66667rem;
+    object-fit: cover;
+    border-radius: var(--round);
+    margin: 0;
+    padding: 0 !important;
+  }
+}
+
+.powered-by-footer {
+  display: block !important;
+  column-span: all;
+  margin: 0.25rem 0 0 0 !important;
+  text-align: center;
+}
+
 /* MOBILE */
 
 /* Bubbles */
-@media (width < 1024px) {
+@media screen and (width < 1024px) {
   :root {
     --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 5);
   }
@@ -622,8 +682,21 @@ div.choose-share-target {
 }
 
 /* padding for Google's bad decisions */
-@media (width < 1024px) {
+@media screen and (width < 1024px) {
   div.typing-notifications {
     margin-bottom: min(25px, 2.2rem);
+  }
+}
+
+/* pickers for mobile */
+@media screen and (width<=1024px) {
+  div.emoji-picker,
+  div.gif-picker,
+  div.sticker-picker {
+    border-radius: var(--round);
+    width: calc(100% - (1.06666rem * 2));
+    margin: 1.06666rem;
+    margin-top: 40vh;
+    height: calc(50%);
   }
 }

@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.1.0
+ * v3.2.1
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -434,11 +434,11 @@ div.room-view {
 /* Room list */
 div.room-list-wrapper {
   grid-template:
-    'spacebar search' var(--window-top-margin) 'spacebar search' max(
-      4.8rem,
-      4.2rem
-    )
-    'spacebar roomlist' 1fr / 3rem 1fr;
+    'spacebar search' var(--window-top-margin)
+    'spacebar search' max(4.8rem, 4.2rem)
+    'spacebar roomlist' 1fr
+    'profile  roomlist' 3rem
+    / 3rem 1fr;
   box-shadow: 0.125rem 0 0.625rem var(--box-shadow0);
 
   .room-search-wrapper {
@@ -557,6 +557,51 @@ div.choose-share-target {
   column-span: all;
   margin: 0.25rem 0 0 0 !important;
   text-align: center;
+}
+
+/* Settings view */
+div.overlay {
+  &.modal > div.modal-box {
+    border-radius: var(--round);
+    & > div.modal-box-inner {
+      padding: 0.25rem;
+    }
+  }
+}
+
+div.settings-view {
+  & > nav.tabs {
+    border-radius: var(--round);
+    box-shadow: 0 0.125rem 0.625rem 0.125rem var(--box-shadow1);
+    & button &:not(.active) {
+      background-color: var(--ctp-base);
+      &:hover {
+        background-color: var(--ctp-surface0);
+      }
+    }
+  }
+}
+
+textarea, input {
+  background-color: var(--ctp-base);
+  border-radius: var(--round);
+  border: 2px solid var(--ctp-crust);
+  padding: 0.625rem;
+}
+
+select {
+  background-color: var(--ctp-base);
+  border-radius: var(--round);
+  border: 2px solid var(--ctp-crust);
+  padding: 0.25rem 0.625rem;
+}
+
+div.settings-tab > div.preference-table {
+  & > div.preference {
+    &.select-preference > select {
+      padding: 0.25rem 0.625rem;
+    }
+  }
 }
 
 /* MOBILE */

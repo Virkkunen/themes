@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.3.0
+ * v3.4.0
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -223,6 +223,16 @@ div.event-reactions > div.reaction {
   }
 }
 
+textarea,
+input,
+select {
+  background-color: var(--ctp-base);
+  border-radius: var(--round);
+  border: none;
+  padding: 0 0.625rem;
+  color: var(--ctp-text);
+}
+
 div.message-composer {
   border-top: none;
   padding: 0.625rem;
@@ -304,6 +314,13 @@ div.right-panel {
     background-color: var(--ctp-mantle);
     padding: 0.42rem 0.5rem;
 
+    input,
+    select,
+    textarea {
+      border: none !important;
+      background-color: var(--ctp-surface0);
+    }
+
     &.members {
       & > input.member-filter {
         background-color: var(--ctp-surface0);
@@ -317,36 +334,67 @@ div.right-panel {
         padding: 0.25rem 0.5rem;
       }
     }
-  }
-}
 
-div.extended-profile, div.devices, div.mutual-rooms, div.user-moderation {
-    border-radius: var(--round);
-    background-color: var(--ctp-base);
-    padding: 0.625rem;
-}
+    &.user {
+      div.extended-profile,
+      div.devices,
+      div.mutual-rooms,
+      div.user-moderation {
+        border-radius: var(--round);
+        background-color: var(--ctp-base);
+        padding: 0.625rem;
+      }
 
-div.extended-profile {
-    div.profile-small-bio {
+      & div.avatar-container {
+        & > img {
+          border-radius: var(--round);
+        }
+      }
+
+      & p.verified-message {
+        &.verified {
+          color: var(--ctp-green);
+        }
+        &.tofu {
+          color: var(--ctp-lavender);
+        }
+      }
+    }
+
+    div.extended-profile {
+      button {
+        margin-top: 0.625rem;
+        border-radius: var(--round);
+        background-color: var(--ctp-surface0);
+        color: var(--ctp-text);
+        padding: 0.25rem 0.5rem !important;
+
+        &:hover {
+          background-color: var(--ctp-surface1);
+        }
+      }
+
+      div.profile-small-bio {
         margin-bottom: 0.625rem;
+
         button {
-            margin-top: 0.625rem;
-            border-radius: var(--round);
-            background-color: var(--ctp-surface0);
-            color: var(--ctp-text);
-            padding: 0.25rem 0.5rem !important;
-        }
+          margin-top: 0.625rem;
+          border-radius: var(--round);
+          background-color: var(--ctp-surface0);
+          color: var(--ctp-text);
+          padding: 0.25rem 0.5rem !important;
 
-        button:hover {
+          &:hover {
             background-color: var(--ctp-surface1);
+          }
         }
-    }
+      }
 
-    & > input {
-        border: 2px solid var(--ctp-crust) !important;
-        border-bottom: unset !important;
-        padding: 0 0.625rem !important;
+      div.view-buttons {
+        gap: 0.5rem;
+      }
     }
+  }
 }
 
 /* overlay */
@@ -615,20 +663,6 @@ div.settings-view {
       }
     }
   }
-}
-
-textarea, input {
-  background-color: var(--ctp-base);
-  border-radius: var(--round);
-  border: 2px solid var(--ctp-crust);
-  padding: 0.625rem;
-}
-
-select {
-  background-color: var(--ctp-base);
-  border-radius: var(--round);
-  border: 2px solid var(--ctp-crust);
-  padding: 0.25rem 0.625rem;
 }
 
 div.settings-tab > div.preference-table {

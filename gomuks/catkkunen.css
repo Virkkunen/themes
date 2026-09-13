@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.4.0
+ * v3.4.1
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -547,9 +547,7 @@ div.room-list-wrapper {
   }
 
   .favorite {
-    .room-entry-left {
-      border-left: 2px solid var(--ctp-green);
-    }
+    border-left: 2px solid var(--ctp-green);
   }
 }
 
@@ -798,10 +796,10 @@ div.settings-tab > div.preference-table {
 /* padding for Google's bad decisions */
 @media screen and (width < 1024px) {
   div.typing-notifications {
-    margin-bottom: calc(1.6rem + env(safe-area-inset-bottom));
+    margin-bottom: calc(0.625rem + env(safe-area-inset-bottom));
   }
   div.room-list-wrapper {
-    padding-bottom: calc(1.6rem + env(safe-area-inset-bottom));
+    padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));
   }
 }
 

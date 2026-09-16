@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.4.1
+ * v3.4.3
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -13,87 +13,51 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* mocha */
-    --ctp-rosewater: #f5e0dc;
-    --ctp-flamingo: #f2cdcd;
-    --ctp-pink: #f5c2e7;
-    --ctp-mauve: #cba6f7;
-    --ctp-red: #f38ba8;
-    --ctp-maroon: #eba0ac;
-    --ctp-peach: #fab387;
-    --ctp-yellow: #f9e1ae;
-    --ctp-green: #a6e3a1;
-    --ctp-teal: #94e2d5;
-    --ctp-sky: #89dceb;
-    --ctp-sapphire: #74c7ec;
-    --ctp-blue: #89b4fa;
-    --ctp-lavender: #b4befe;
-    --ctp-text: #cdd6f4;
-    --ctp-subtext1: #bac2de;
-    --ctp-subtext0: #a6adc8;
-    --ctp-overlay2: #9399b2;
-    --ctp-overlay1: #7f849c;
-    --ctp-overlay0: #6c7086;
-    --ctp-surface2: #585b70;
-    --ctp-surface1: #45475a;
-    --ctp-surface0: #313244;
-    --ctp-base: #1e1e2e;
-    --ctp-mantle: #181825;
-    --ctp-crust: #11111b;
-    --opacity-overlay0: rgba(180, 190, 254, 0.15);
-    /* ctp-lavender */
-    --opacity-overlay1: rgba(180, 190, 254, 0.25);
-    /* ctp-lavender */
-    --jump-to-reply-overlay0: rgba(203, 166, 247, 0.25);
-    /* ctp-mauve */
-    --box-shadow0: rgba(0, 0, 0, 0.65);
-    --box-shadow1: rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    /* latte */
-    --ctp-rosewater: #dc8a78;
-    --ctp-flamingo: #dd7878;
-    --ctp-pink: #ea76cb;
-    --ctp-mauve: #8839ef;
-    --ctp-red: #d20f39;
-    --ctp-maroon: #e64553;
-    --ctp-peach: #fe640b;
-    --ctp-yellow: #df8e1d;
-    --ctp-green: #40a02b;
-    --ctp-teal: #179299;
-    --ctp-sky: #04a5e5;
-    --ctp-sapphire: #209fb5;
-    --ctp-blue: #1e66f5;
-    --ctp-lavender: #7287fd;
-    --ctp-text: #4c4f69;
-    --ctp-subtext1: #5c5f77;
-    --ctp-subtext0: #6c6f85;
-    --ctp-overlay2: #7c7f93;
-    --ctp-overlay1: #8c8fa1;
-    --ctp-overlay0: #9ca0b0;
-    --ctp-surface2: #acb0be;
-    --ctp-surface1: #bcc0cc;
-    --ctp-surface0: #ccd0da;
-    --ctp-base: #eff1f5;
-    --ctp-mantle: #e6e9ef;
-    --ctp-crust: #dce0e8;
-    --opacity-overlay0: rgba(114, 135, 253, 0.15);
-    /* ctp-lavender */
-    --opacity-overlay1: rgba(114, 135, 253, 0.25);
-    /* ctp-lavender */
-    --jump-to-reply-overlay0: rgba(136, 57, 239, 0.25);
-    /* ctp-mauve */
-    --box-shadow0: rgba(17, 17, 27, 0.45);
-    --box-shadow1: rgba(17, 17, 27, 0.2);
-  }
-}
-
 :root {
+  color-scheme: light dark;
+
+  --ctp-rosewater: light-dark(#dc8a78, #f5e0dc);
+  --ctp-flamingo: light-dark(#dd7878, #f2cdcd);
+  --ctp-pink: light-dark(#ea76cb, #f5c2e7);
+  --ctp-mauve: light-dark(#8839ef, #cba6f7);
+  --ctp-red: light-dark(#d20f39, #f38ba8);
+  --ctp-maroon: light-dark(#e64553, #eba0ac);
+  --ctp-peach: light-dark(#fe640b, #fab387);
+  --ctp-yellow: light-dark(#df8e1d, #f9e1ae);
+  --ctp-green: light-dark(#40a02b, #a6e3a1);
+  --ctp-teal: light-dark(#179299, #94e2d5);
+  --ctp-sky: light-dark(#04a5e5, #89dceb);
+  --ctp-sapphire: light-dark(#209fb5, #74c7ec);
+  --ctp-blue: light-dark(#1e66f5, #89b4fa);
+  --ctp-lavender: light-dark(#7287fd, #b4befe);
+  --ctp-text: light-dark(#4c4f69, #cdd6f4);
+  --ctp-subtext1: light-dark(#5c5f77, #bac2de);
+  --ctp-subtext0: light-dark(#6c6f85, #a6adc8);
+  --ctp-overlay2: light-dark(#7c7f93, #9399b2);
+  --ctp-overlay1: light-dark(#8c8fa1, #7f849c);
+  --ctp-overlay0: light-dark(#9ca0b0, #6c7086);
+  --ctp-surface2: light-dark(#acb0be, #585b70);
+  --ctp-surface1: light-dark(#bcc0cc, #45475a);
+  --ctp-surface0: light-dark(#ccd0da, #313244);
+  --ctp-base: light-dark(#eff1f5, #1e1e2e);
+  --ctp-mantle: light-dark(#e6e9ef, #181825);
+  --ctp-crust: light-dark(#dce0e8, #11111b);
+
+  --opacity-overlay0: light-dark(
+    rgba(114, 135, 253, 0.15),
+    rgba(180, 190, 254, 0.15)
+  );
+  --opacity-overlay1: light-dark(
+    rgba(114, 135, 253, 0.25),
+    rgba(180, 190, 254, 0.25)
+  );
+  --jump-to-reply-overlay0: light-dark(
+    rgba(136, 57, 239, 0.25),
+    rgba(203, 166, 247, 0.25)
+  );
+  --box-shadow0: light-dark(rgba(17, 17, 27, 0.45), rgba(0, 0, 0, 0.65));
+  --box-shadow1: light-dark(rgba(17, 17, 27, 0.2), rgba(0, 0, 0, 0.2));
+
   --round: 0.625rem;
   --primary-color: var(--ctp-mauve);
   --primary-color-dark: var(--ctp-mauve);
@@ -235,7 +199,6 @@ select {
 
 div.message-composer {
   border-top: none;
-  padding: 0.625rem;
   box-shadow: 0 0 0.625rem 0.125rem var(--box-shadow1);
 }
 

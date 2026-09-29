@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.4.3
+ * v3.4.5
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -120,6 +120,9 @@
   --sent-ok-color: var(--ctp-green);
   --blockquote-border-color: var(--ctp-lavender);
   --lightbox-button-color: var(--ctp-rosewater);
+  --own-reaction-border-color: var(--ctp-mauve);
+  --own-reaction-background-color: var(--ctp-surface1);
+  --own-reaction-hover-color: var(--ctp-surface2);
 
   --room-list-padding: 0.625rem;
   --timeline-avatar-size: 2.5rem;
@@ -151,9 +154,10 @@ a.hicli-matrix-uri-user:not(.hicli-matrix-uri-plaintext),
 }
 
 div.event-reactions > div.reaction {
-  background-color: var(--ctp-base);
+  background-color: var(--ctp-surface0);
   gap: 0.5rem;
   padding: 0.05rem 0.5rem;
+  border-color: var(--ctp-surface1);
 }
 
 /* input */
@@ -662,6 +666,10 @@ div.settings-tab > div.preference-table {
         direction: ltr;
       }
 
+      > .read-receipts {
+        justify-content: flex-start;
+      }
+
       .event-sender-and-time {
         flex-direction: row-reverse;
       }
@@ -669,6 +677,10 @@ div.settings-tab > div.preference-table {
       .event-content {
         background-color: var(--ctp-red);
         color: var(--ctp-crust);
+
+        .event-reactions {
+          color: var(--ctp-text);
+        }
 
         @media (prefers-color-scheme: dark) {
           a {
@@ -735,6 +747,8 @@ div.settings-tab > div.preference-table {
       }
     }
   }
+
+  /* bubbles end here I think */
 
   div.message-composer,
   div.typing-notifications {

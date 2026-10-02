@@ -1,7 +1,7 @@
 /*
  *
  * Catkkunen for gomuks
- * v3.4.5
+ * v3.4.6
  *
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
@@ -272,7 +272,7 @@ div.right-panel {
     border: none;
     height: 4.8rem;
 
-    @media screen and (width < 1024px) {
+    @media screen and (width < 37.5rem) {
       height: 4.2rem;
     }
   }
@@ -431,7 +431,7 @@ div.space-view {
   align-items: start;
   padding: 1.125rem;
 
-  @media screen and (width < 1024px) {
+  @media screen and (width < 37.5rem) {
     align-items: center;
     padding: unset;
     padding-bottom: 2rem;
@@ -475,6 +475,17 @@ div.room-view {
   }
 }
 
+@media screen and (width >= 37.5rem) {
+  button.back {
+    display: none;
+  }
+
+  div.room-header {
+    padding-left: 1.36667rem;
+    padding-right: 0.36667rem;
+  }
+}
+
 /* Room list */
 div.room-list-wrapper {
   grid-template:
@@ -507,6 +518,7 @@ div.room-list-wrapper {
   .room-list {
     margin-top: 0.125rem;
     padding: 0 min(0.625rem, 1.8vw);
+    overflow-x: hidden;
 
     .room-entry {
       border-radius: var(--round);
@@ -522,6 +534,10 @@ div.room-list-wrapper {
   &.small-event {
     color: var(--ctp-subtext0);
   }
+}
+
+button.search-clear-button:disabled {
+  display: none;
 }
 
 /* Message Preview */
@@ -641,7 +657,7 @@ div.settings-tab > div.preference-table {
 /* MOBILE */
 
 /* Bubbles */
-@media screen and (width < 1024px) {
+@media screen and (width < 37.5rem) {
   :root {
     --timeline-message-gap-same-sender: calc(var(--timeline-message-gap) / 5);
   }
@@ -666,7 +682,8 @@ div.settings-tab > div.preference-table {
         direction: ltr;
       }
 
-      > .read-receipts {
+      > .read-receipts,
+      .event-send-status {
         justify-content: flex-start;
       }
 
@@ -748,8 +765,6 @@ div.settings-tab > div.preference-table {
     }
   }
 
-  /* bubbles end here I think */
-
   div.message-composer,
   div.typing-notifications {
     margin: 0 1.125rem;
@@ -768,10 +783,10 @@ div.settings-tab > div.preference-table {
       text-shadow: 1px 1px 2px var(--box-shadow1);
     }
   }
-}
+} /* bubbles end here I think */
 
 /* padding for Google's bad decisions */
-@media screen and (width < 1024px) {
+@media screen and (width < 37.5rem) {
   div.typing-notifications {
     margin-bottom: calc(0.625rem + env(safe-area-inset-bottom));
   }
@@ -781,7 +796,7 @@ div.settings-tab > div.preference-table {
 }
 
 /* pickers for mobile */
-@media screen and (width<=1024px) {
+@media screen and (width < 37.5rem) {
   div.emoji-picker,
   div.gif-picker,
   div.sticker-picker {

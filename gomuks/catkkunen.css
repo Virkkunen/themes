@@ -1,5 +1,5 @@
 /*
- * Catkkunen for gomuks v3.5.0
+ * Catkkunen for gomuks v3.5.1
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
  * Based on Catppuccin: https://github.com/catppuccin/catppuccin
@@ -167,7 +167,7 @@ select {
   background-color: var(--ctp-base);
   border-radius: var(--round);
   border: none;
-  padding: 0 var(--round);
+  padding: 0 0.625rem;
   color: var(--ctp-text);
 }
 
@@ -283,7 +283,7 @@ div.right-panel {
       :is(div.extended-profile, div.devices, div.mutual-rooms, div.user-moderation) {
         border-radius: var(--round);
         background-color: var(--ctp-base);
-        padding: var(--round);
+        padding: 0.625rem;
       }
 
       div.mutual-rooms .room-entry {
@@ -306,7 +306,7 @@ div.right-panel {
 
     div.extended-profile {
       button {
-        margin-top: var(--round);
+        margin-top: 0.625rem;
         border-radius: var(--round);
         background-color: var(--ctp-surface0);
         color: var(--ctp-text);
@@ -318,7 +318,7 @@ div.right-panel {
       }
 
       div.profile-small-bio {
-        margin-bottom: var(--round);
+        margin-bottom: 0.625rem;
       }
 
       div.view-buttons {
@@ -347,7 +347,7 @@ div.media-container {
   & > div.placeholder > div.placeholder-reason {
     border-radius: var(--round);
     color: var(--inverted-text-color);
-    padding: var(--round);
+    padding: 0.625rem;
     font-weight: 500;
   }
 }
@@ -398,7 +398,7 @@ div.space-view {
   padding: 1.125rem;
 
   .space-children {
-    row-gap: var(--round);
+    row-gap: 0.625rem;
 
     .space-child {
       padding: 0.5rem 0.25rem;
@@ -444,6 +444,7 @@ div.room-list-wrapper {
     'spacebar search' 4.8rem
     'spacebar roomlist' 1fr
     'profile  roomlist' 3rem
+    "blank    roomlist" calc(var(--window-bottom-margin) * 1.6)
     / 3rem 1fr;
   box-shadow: 0.125rem 0 0.625rem var(--box-shadow0);
 
@@ -457,7 +458,7 @@ div.room-list-wrapper {
     & > input {
       background-color: var(--ctp-surface0);
       border-radius: var(--round);
-      margin: 0 var(--round);
+      margin: 0 0.625rem;
     }
   }
 
@@ -467,19 +468,19 @@ div.room-list-wrapper {
 
   .room-list {
     margin-top: 0.125rem;
-    padding: 0 min(var(--round), 1.8vw);
+    padding: 0 min(0.625rem, 1.8vw);
     overflow-x: hidden;
 
     .room-entry {
       border-radius: var(--round);
 
       & > img.room-avatar {
-        margin: var(--vertical-margin) var(--round);
+        margin: var(--vertical-margin) 0.625rem;
       }
 
       &
         > :is(div.room-entry-timestamp, div.room-entry-unreads, div.message-preview) {
-        margin-right: var(--round);
+        margin-right: 0.625rem;
       }
     }
   }
@@ -525,7 +526,7 @@ div.choose-share-target {
   position: sticky !important;
   top: 0.25rem !important;
   z-index: 1 !important;
-  margin-top: var(--round) !important;
+  margin-top: 0.625rem !important;
   background: var(--background-color);
   align-items: unset !important;
   box-shadow: var(--glow-shadow);
@@ -534,13 +535,13 @@ div.choose-share-target {
 .gif-list {
   display: block !important;
   columns: 3;
-  column-gap: var(--round);
+  column-gap: 0.625rem;
   height: auto;
   max-height: none;
   width: 100%;
   box-sizing: border-box;
   overflow: visible !important;
-  padding: var(--round) !important;
+  padding: 0.625rem !important;
   padding-top: 0 !important;
   margin: 0;
 }
@@ -549,7 +550,7 @@ div.choose-share-target {
   display: block;
   width: 100%;
   break-inside: avoid;
-  margin-bottom: var(--round);
+  margin-bottom: 0.625rem;
 
   img {
     display: block;
@@ -589,7 +590,7 @@ div.settings-tab
   > div.preference-table
   > div.preference.select-preference
   > select {
-  padding: 0.25rem var(--round);
+  padding: 0.25rem 0.625rem;
 }
 
 /*  */
@@ -712,7 +713,7 @@ div.settings-tab
   }
 
   div.space-bar > div.space-entry {
-    margin-bottom: var(--round);
+    margin-bottom: 0.625rem;
   }
 
   blockquote.reply-body > div.reply-sender {
@@ -721,11 +722,7 @@ div.settings-tab
 
   /* offsets */
   div.typing-notifications {
-    margin-bottom: calc(var(--round) + env(safe-area-inset-bottom, 0px));
-  }
-
-  div.room-list-wrapper {
-    padding-bottom: calc(var(--round) + env(safe-area-inset-bottom, 0px));
+    margin-bottom: calc(0.625rem + env(safe-area-inset-bottom, 0px));
   }
 
   /* mobile pickers modals */

@@ -1,5 +1,5 @@
 /*
- * Catkkunen for gomuks v3.5.2
+ * Catkkunen for gomuks v3.5.3
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
  * Based on Catppuccin: https://github.com/catppuccin/catppuccin
@@ -264,12 +264,13 @@ div.right-panel {
 
     @media screen and (width < 37.5rem) {
       height: 4.2rem;
+      padding: 0 0.625rem;
     }
   }
 
   & > div.right-panel-content {
     background-color: var(--ctp-mantle);
-    padding: 0.42rem 0.5rem;
+    padding: 0.625rem 1rem;
 
     :is(input, select, textarea) {
       border: none !important;
@@ -630,7 +631,7 @@ div.settings-tab
   }
 
   /* Bubblemuks */
-  .timeline-event:not(.small-event) {
+  .room-view .timeline-event:not(.small-event) {
     .event-content {
       width: 100%;
       max-width: max-content;

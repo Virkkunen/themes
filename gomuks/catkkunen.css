@@ -1,5 +1,5 @@
 /*
- * Catkkunen for gomuks v3.5.1
+ * Catkkunen for gomuks v3.5.2
  * Theme by @vrkknn:vrkknn.net
  * https://github.com/Virkkunen/themes/
  * Based on Catppuccin: https://github.com/catppuccin/catppuccin
@@ -153,6 +153,16 @@
   font-weight: 500;
 }
 
+div.policy-body {
+  &
+    :is(a.hicli-matrix-uri-user, a.hicli-matrix-uri-room-alias):not(.hicli-matrix-uri-plaintext) {
+    color: var(--ctp-maroon) !important;
+    border-radius: unset !important;
+    padding: unset !important;
+    font-weight: unset !important;
+  }
+}
+
 div.event-reactions > div.reaction {
   background-color: var(--ctp-surface0);
   gap: 0.5rem;
@@ -245,6 +255,7 @@ div.message-composer {
 div.right-panel {
   border-left: none;
   box-shadow: -0.125rem 0 0.625rem var(--box-shadow0);
+  margin-bottom: var(--window-bottom-margin);
 
   & > div.right-panel-header {
     background-color: var(--ctp-base);
@@ -444,7 +455,7 @@ div.room-list-wrapper {
     'spacebar search' 4.8rem
     'spacebar roomlist' 1fr
     'profile  roomlist' 3rem
-    "blank    roomlist" calc(var(--window-bottom-margin) * 1.6)
+    'blank    roomlist' calc(var(--window-bottom-margin) * 1.6)
     / 3rem 1fr;
   box-shadow: 0.125rem 0 0.625rem var(--box-shadow0);
 
